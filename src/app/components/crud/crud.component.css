@@ -1,0 +1,12 @@
+.main-container {
+    border: 1px solid #ddd;
+    /* border-radius: @border-radius-base; */
+    margin: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #e8eef0;
+    z-index: -1;
+    min-height: 100vh;
+    /*height: calc(100vh - 200px); */
+}
