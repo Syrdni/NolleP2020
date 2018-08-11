@@ -1,3 +1,27 @@
-<p>
-  scoreboard works!
-</p>
+<crud>
+	<!-- <div class="card" picture>
+	</div> -->
+	<div text>
+		<div class="container">
+			<div *ngFor="let item of scores; let i = index">
+				<div class="justify-content-md-center" *ngIf="item.place===1" style="text-align:center;">
+					<div class="coin gold"></div>
+					<p style="margin-bottom:0px;"><u>{{item.class}}</u></p><p>{{item.score}}</p>
+				</div>
+				<div class="justify-content-md-center" style="text-align:center;">
+					<div *ngIf="item.place===2">
+						<div class="coin silver"></div>
+						<p style="margin-bottom:0px;"><u>{{item.class}}</u></p>  <p>{{item.score}}</p>
+					</div>
+					<div *ngIf="item.place===3">
+						<div class="coin bronze"></div>
+						<p style="margin-bottom:0px;"><u>{{item.class}}</u></p>  <p>{{item.score}}</p>
+					</div>
+				</div>
+				<div *ngIf="item.place>3">
+					<p>{{item.place}} {{item.class}} {{item.score}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</crud>

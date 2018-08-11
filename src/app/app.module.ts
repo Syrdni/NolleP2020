@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { nib } from '../../node_modules/nib';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
   { path: 'info',        component: NollepInfoComponent },
   { path: 'scoreboard',  component: ScoreboardComponent },
   { path: '',
-    redirectTo: '/heroes',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { path: '**', component: AppComponent }

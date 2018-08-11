@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudComponent implements OnInit {
 
+  images: Array<string> = ['./../../../assets/nordskenlogo.png'];
+
   constructor() { }
 
   ngOnInit() {
