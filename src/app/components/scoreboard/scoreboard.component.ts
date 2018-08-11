@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreboardComponent implements OnInit {
 
-  scores: Array<object> = [{place: 3, class: 'Maskin & Energi', score: 123231}, 
-                           {place: 1, class: 'Dator',           score: -1000},
-                           {place: 2, class: 'Digisign',        score: 1},
-                           {place: 7, class: 'Attribut',        score: 593},
-                           {place: 6, class: 'Ekonomi',         score: 2344},
-                           {place: 5, class: 'Nätverk',         score: 2344},
-                           {place: 4, class: 'Basår',           score: 2344}];
+  scores: Array<object> = [{class: 'Maskin- & Energiteknik', score: -123231}, 
+                           {class: 'Datorspelsutveckling',   score: 1000},
+                           {class: 'Digital design',         score: 1},
+                           {class: 'Filmdesign',             score: 593},
+                           {class: 'Ekonomi',                score: -2344},
+                           {class: 'Nätverk',                score: 2345},
+                           {class: 'Basår',                  score: 3344}];
 
   constructor() { }
 
@@ -38,9 +38,9 @@ export class ScoreboardComponent implements OnInit {
   /// Easy enough so insertion sort can be used
   sortByKeys(values) {
     return values.sort((a, b) => {
-      const x = a.place;
-      const y = b.place;
-      return ((x < y ? -1 : (x > y) ? 1 : 0));
+      const x = a.score;
+      const y = b.score;
+      return ((x > y ? -1 : (x < y) ? 1 : 0));
     });
   }
 

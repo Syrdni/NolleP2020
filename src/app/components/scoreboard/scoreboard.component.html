@@ -1,27 +1,33 @@
 <crud>
-	<!-- <div class="card" picture>
-	</div> -->
+	<div class="card" picture>
+		<div class="card" style="background-color: darkgrey" picture>
+			<img class="card-img-top" style="height: auto; width: 40vh; display: block; margin-left: auto; margin-right: auto;" src="./../../../assets/nollep2018logo.png" alt="Card image cap">
+			<!-- <div class="card-body">
+			</div> -->
+		</div>
+	</div>
 	<div text>
 		<div class="container">
-			<div *ngFor="let item of scores; let i = index">
-				<div class="justify-content-md-center" *ngIf="item.place===1" style="text-align:center;">
-					<div class="coin gold"></div>
-					<p style="margin-bottom:0px;"><u>{{item.class}}</u></p><p>{{item.score}}</p>
+			<div class="col-md-12 justify-content-md-center" style="text-align: center;">
+				<div class="coin gold"></div>
+				<p style="margin-bottom:0px;"><u>{{scores[0].class}}</u></p><p>{{scores[0].score}}</p>
+			</div>
+			<div class="row justify-content-md-center" style="text-align: center;">
+				<div class="col-md-6">
+					<div class="coin silver"></div>
+					<p style="margin-bottom:0px;"><u>{{scores[1].class}}</u></p>  <p>{{scores[1].score}}</p>
 				</div>
-				<div class="justify-content-md-center" style="text-align:center;">
-					<div *ngIf="item.place===2">
-						<div class="coin silver"></div>
-						<p style="margin-bottom:0px;"><u>{{item.class}}</u></p>  <p>{{item.score}}</p>
-					</div>
-					<div *ngIf="item.place===3">
-						<div class="coin bronze"></div>
-						<p style="margin-bottom:0px;"><u>{{item.class}}</u></p>  <p>{{item.score}}</p>
-					</div>
-				</div>
-				<div *ngIf="item.place>3">
-					<p>{{item.place}} {{item.class}} {{item.score}}</p>
+				<div class="col-md-6">
+					<div class="coin bronze"></div>
+					<p style="margin-bottom:0px;"><u>{{scores[2].class}}</u></p>  <p>{{scores[2].score}}</p>
 				</div>
 			</div>
+			<div class="row justify-content-md-center" style="margin-bottom: 10px; margin-top: 20px;" >
+				<div *ngFor="let item of scores | slice:3; let i = index" class="col-md-12 col-lg-3" style="text-align: center">
+					<p style="margin-bottom:0px;"><u>{{i+3}}: {{item.class}}</u></p>  <p>{{item.score}}</p>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </crud>

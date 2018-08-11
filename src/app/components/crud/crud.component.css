@@ -1,7 +1,7 @@
 .main-container {
     border: 1px solid #ddd;
     /* border-radius: @border-radius-base; */
-    margin-top: 5px;
+    margin-top: 40px;
     /* padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px; */
@@ -12,10 +12,10 @@
 }
 
 .sponsor-container {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(163, 163, 163);
     /* margin-right: 10px; */
-    margin-top: 5px;
-    margin-left: -13px;
+    margin-top: 40px;
+    margin-left: -10px;
     background-color: #e8eef0;
     /* min-height: 20vh; */
     /* max-height: 15vh;
@@ -25,7 +25,7 @@
 }
 
 .box-shadow{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 22px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* CUSTOM TEXT EFFECTS START*/
@@ -101,3 +101,11 @@
 }
 
 /* CUSTOM BACKGROUNDS END*/
+
+#demotext {
+    color: #bc2e1e;
+    background: #edde9c;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+    color: #bc2e1e;
+    background: #edde9c;
+}
