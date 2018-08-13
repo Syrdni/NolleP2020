@@ -13,6 +13,9 @@ import { CrudComponent } from './components/crud/crud.component';
 
 // import {RoutesArray} from './../app.routes';
 
+/**
+ * ROUTES
+ */
 const appRoutes: Routes = [
   { path: 'home',        component: HomeComponent },
   { path: 'new-student', component: NewStudentComponent },
