@@ -20,26 +20,28 @@
 
 .navbar-nav > li {
     display: inline-block;
-    float:none;
+    float: none;
     transform: translateY(100%);
     background-color: #343a40;
 }
 
 .squareOne {
-    position: absolute;
-    width: 50px;
+    width: 60px;
 	height: 40px;
     background-color: #343a40;
-    transform: translateX(-59%) translateY(-30%) rotate(45deg);
+    position: absolute;
+    transform: translateX(-75%) translateY(-119%) rotate(45deg);
     z-index: -1;
 }
 
 .squareTwo {
-    position: absolute;
-    width: 50px;
+    
+    width: 60px;
     height: 40px;
+    position: absolute;
+    transform: translateX(132%) translateY(-118%) rotate(-45deg);
     background-color: #343a40;
-    transform: translateX(541%) translateY(-30%) rotate(-45deg);
+    /* transform: translateX(620%) translateY(-30%) rotate(-45deg); */
     z-index: -1;
 }
 

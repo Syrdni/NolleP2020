@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'scoreboard',
@@ -7,33 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreboardComponent implements OnInit {
 
-  scores: Array<object> = [{class: 'Maskin- & Energiteknik', score: -123231}, 
-                           {class: 'Datorspelsutveckling',   score: 1000},
-                           {class: 'Digital design',         score: 1},
-                           {class: 'Filmdesign',             score: 593},
-                           {class: 'Ekonomi',                score: -2344},
-                           {class: 'Nätverk',                score: 2345},
-                           {class: 'Basår',                  score: 3344}];
+  scores: Array<object> = [];  
 
-  constructor() { }
-
-  ngOnInit() {
-    this.scores = this.sortByKeys(this.scores);
+  constructor(private http:Http) {
+    this.http.get('assets/score.json')
+    .subscribe(res => {
+      // console.log(res.json());
+      this.scores = this.sortByKeys(res.json());
+    }, error => console.log('Failed to load values!', error));
+    
   }
 
-  loadValues() {
-    console.log("Load Values was pressed!");
-
-    /// Load values from csv file
-
-    /// Split values by (,) and objects by (;)
-
-    /// Sort by place
-
-    /// store sorted array
-
-    /// 
-  }
+  ngOnInit() {  }
 
   /// Easy enough so insertion sort can be used
   sortByKeys(values) {

@@ -1,0 +1,30 @@
+[
+    {
+        "class":"Maskin- & Energiteknik",
+        "score":-123231
+    },
+    {
+        "class":"Datorspelsutveckling",
+        "score":1000
+    },
+    {
+        "class":"Digital design",
+        "score":1
+    },
+    {
+        "class":"Filmdesign",
+        "score":593
+    }
+    ,    {
+        "class":"Ekonomi",
+        "score":-2344
+    }
+    ,    {
+        "class":"Nätverk",
+        "score":2345
+    },
+    {
+        "class":"Basår",
+        "score":5000
+    }
+]
