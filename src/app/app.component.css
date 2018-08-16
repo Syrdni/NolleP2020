@@ -91,19 +91,29 @@
 
 /* Font Setup*/
 @font-face {
-    font-family: font;
-    src: url("./../assets/fonts/JurassicPark.woff") format("woff");
+    font-family: main-font;
+    src: url("/assets/fonts/JurassicPark.woff") format("woff");
+}
+@font-face {
+    font-family: year-font;
+    src: url("/assets/fonts/Starjedi.woff") format("woff");
 }
 
-.font header{
+.font header {
     transform: translateX(-50%) translateY(-40%);
     left: 50%;
     position: absolute;
+    display: inline-block;
 }
 
-.font header h1 {
+.main-font {
     color: #fff;
     font-size: 3rem;
-    /* margin: 16px; */
-    font-family: font;
+    font-family: main-font;
+}
+
+.year-font {
+    color: #fff;
+    font-size: 1rem;
+    font-family: year-font;
 }
