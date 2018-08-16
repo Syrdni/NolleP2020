@@ -9,10 +9,20 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse menu-mobile" *ngIf="isExpanded" id="navbarContent" [ngbCollapse]="!isExpanded">
-		<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-		<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active">Ditt Nolle-P</a>
-		<a class="nav-item nav-link" routerLink="/info" routerLinkActive="active">Kontakt</a>
-		<a class="nav-item nav-link" routerLink="/scoreboard" routerLinkActive="active">Nollekampen</a>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="isExpanded = !isExpanded">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active" (click)="isExpanded = !isExpanded">Ditt Nolle-P</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-item nav-link" routerLink="/info" routerLinkActive="active" (click)="isExpanded = !isExpanded">Kontakt</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active" (click)="isExpanded = !isExpanded">Nollekampen</a>
+			</li>
+		</ul>
 	</div>
 	<div class="collapse navbar-collapse menu-none-mobile" id="navbarContent">
 		<ul class="navbar-nav">
