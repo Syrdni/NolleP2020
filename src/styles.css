@@ -15,10 +15,10 @@ body {
 
 /* Font Family Setup*/
 @font-face {
-    font-family: main-font;
+    font-family: jurrasic-park;
     src: url("/assets/fonts/JurassicPark.woff") format("woff");
 }
 @font-face {
-    font-family: year-font;
+    font-family: star-jedi;
     src: url("/assets/fonts/Starjedi.woff") format("woff");
 }
