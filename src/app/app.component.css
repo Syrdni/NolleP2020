@@ -3,6 +3,12 @@
     z-index: -2;
     transform: scale(1.1); /* to get rid of white edges when blurring*/
     position: absolute;
+    background-image: url("/assets/download.png");
+    background-repeat: repeat-y;
+}
+
+.navbar {
+    border-bottom: 3px solid white;
 }
 
 .navbar-brand {
@@ -12,8 +18,8 @@
 }
 
 .navbar-nav {
-    float:none;
-    margin:0 auto;
+    float: none;
+    margin: 0 auto;
     display: block;
     text-align: center;
 }
@@ -23,6 +29,7 @@
     float: none;
     transform: translateY(100%);
     background-color: #343a40;
+    border-bottom: 3px solid white;
 }
 
 .squareOne {
@@ -31,33 +38,35 @@
     background-color: #343a40;
     position: absolute;
     transform: translateX(-75%) translateY(-119%) rotate(45deg);
+    border-bottom: 3px solid white;
     z-index: -1;
 }
 
 .squareTwo {
-    
     width: 60px;
     height: 40px;
     position: absolute;
     transform: translateX(132%) translateY(-118%) rotate(-45deg);
     background-color: #343a40;
-    /* transform: translateX(620%) translateY(-30%) rotate(-45deg); */
+    border-bottom: 3px solid white;
     z-index: -1;
 }
 
-.avengers-font header{
+/* Font Setup*/
+@font-face {
+    font-family: font;
+    src: url("./../assets/fonts/Starjedi.woff") format("woff");
+}
+
+.font header{
     transform: translateX(-50%) translateY(-40%);
     left: 50%;
     position: absolute;
 }
 
-@font-face {
-    font-family: avengersFont;
-    src: url("./../assets/fonts/AVENGEANCEHEROICAVENGERBD.woff") format("woff");
-}
-.avengers-font header h1 {
+.font header h1 {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* margin: 16px; */
-    font-family: avengersFont;
+    font-family: font;
 }

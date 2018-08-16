@@ -1,16 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule }        from '@angular/platform-browser';
+import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpModule }      from '@angular/http';
+import { NgbModule }            from '@ng-bootstrap/ng-bootstrap';
+import { HttpModule }           from '@angular/http';
 // import { nib } from '../../node_modules/nib';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
+import { AppComponent }        from './app.component';
+import { HomeComponent }       from './components/home/home.component';
 import { NollepInfoComponent } from './components/nollep-info/nollep-info.component';
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
 import { NewStudentComponent } from './components/new-student/new-student.component';
-import { CrudComponent } from './components/crud/crud.component';
+import { CrudComponent }       from './components/crud/crud.component';
 
 // import {RoutesArray} from './../app.routes';
 

@@ -1,36 +1,20 @@
 .main-container {
     border: 1px solid #ddd;
-    /* border-radius: @border-radius-base; */
     margin-top: 40px;
-    /* padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px; */
     background-color: #e8eef0;
-    /* min-height: 100vh; */
     min-height: 50vh;
-    /*height: calc(100vh - 200px); */
 }
 
 .sponsor-container {
     border: 1px solid rgb(163, 163, 163);
-    /* margin-right: 10px; */
     margin-top: 40px;
     margin-left: -10px;
     background-color: #e8eef0;
-    /* min-height: 20vh; */
-    /* max-height: 15vh;
-    min-width: 12vw;
-    max-width: 12vw; */
-    /* position: absolute; */
 }
 
-.box-shadow{
+.box-shadow {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 22px 0 rgba(0, 0, 0, 0.5);
 }
-
-/* CUSTOM TEXT EFFECTS START*/
-
-/* CUSTOM TEXT EFFECTS END*/
 
 /* CUSTOM BACKGROUNDS START*/
 
