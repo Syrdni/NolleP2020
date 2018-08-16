@@ -90,14 +90,6 @@
 }
 
 /* Font Setup*/
-@font-face {
-    font-family: main-font;
-    src: url("/assets/fonts/JurassicPark.woff") format("woff");
-}
-@font-face {
-    font-family: year-font;
-    src: url("/assets/fonts/Starjedi.woff") format("woff");
-}
 
 .font header {
     transform: translateX(-50%) translateY(-40%);
