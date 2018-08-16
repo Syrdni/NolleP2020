@@ -1,15 +1,13 @@
 <div class="container-fluid crimson-bg" style="padding-bottom: 30px;">
 	<div class="row justify-content-md-center">
-		
-		<div class="col-sm-1 col-md-1 col-lg-1 sponsor-container box-shadow">
+		<div class="d-none d-sm-block col-sm-1 col-md-1 col-lg-1 sponsor-container box-shadow">
 			<p style="margin-bottom: 3px">Hostad av</p>
 			<div *ngFor="let image of images; let i = index">
 				<hr style="margin-top: 5px; margin-bottom: 8px;"/>
-				<img class="card-img-top" style="margin-bottom: 3px; padding: 5px; padding-left: 10px; padding-right: 10px; background-color: darkgrey;" src="{{image}}" alt="Card image cap">
+				<img class="card-img-top sponsor-lg-screen" src="{{image}}" alt="Card image cap">
 			</div>
 		</div>
-
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 main-container box-shadow" style="margin-left: 10px;">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 main-container box-shadow marginsLR">
 			<br>
 			<ng-content select="[picture]"></ng-content>
 			<br>
@@ -17,7 +15,15 @@
 			<ng-content select="[text]"></ng-content>
 			<br>
 		</div>
-		<div class="col-sm-1 col-md-1 col-lg-1">
+		<div class="d-none d-sm-block col-sm-1 col-md-1 col-lg-1">
+		</div>
+		<!-- SPONSORS ON CELLPHONE -->
+		<div class="d-sm-none col-xs-1 col-sm-1 sponsor-container box-shadow marginsLR">
+			<p style="margin-bottom: 3px">Hostad av</p>
+			<hr style="margin-top: 5px; margin-bottom: 8px;"/>
+			<div *ngFor="let image of images; let i = index" style="display: inline-block">
+				<img class="card-img-top sponsor-phone" src="{{image}}">
+			</div>
 		</div>
 	</div>
 </div>

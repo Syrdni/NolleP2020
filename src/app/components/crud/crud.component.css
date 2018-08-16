@@ -16,80 +16,30 @@
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 22px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* CUSTOM BACKGROUNDS START*/
+/* LARGE SCREEN LAYOUT */
 
-.grey-bg {
-    background-size: cover;
-	background: grey;
+.marginsLR {
+    margin-left: 10px; 
+    margin-right: 10px;
 }
 
-.crimson-bg {
-    background-size: cover;
-    background: radial-gradient(center, crimson, darken(crimson, 60%));
+.sponsor-lg-screen {
+    margin-bottom: 3px; 
+    padding: 5px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    background-color: darkgrey;
 }
 
-.carbon-fibre {
-    background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;
-}
+/* PHONE LAYOUT */
 
-/* AURORA START */
-
-.aurora-outer {
-    background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);
-    background-size: 200%;
-    animation: aurora 10s infinite;
-}
-
-.aurora-inner {
-    background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-    background-size: 200%;
-    animation: aurora 7s infinite;
-}
-
-@keyframes aurora {
-    0% {
-        background-position: left top;
-    }
-    25% {
-        background-position: right top;
-    }
-    50% {
-        background-position: right bottom;
-    }
-    75% {
-        background-position: left bottom;
-    }
-    100% {
-        background-position: left top;
-    }
-}
-
-/* AURORA END */
-
-.title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: 0;
-    transform: translateY(-50%);
-    font-size: 32px;
-    text-align: center;
-    color: white;
-}
-
-/* CUSTOM BACKGROUNDS END*/
-
-#demotext {
-    color: #bc2e1e;
-    background: #edde9c;
-    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
-    color: #bc2e1e;
-    background: #edde9c;
+.sponsor-phone {
+    width: 100px; 
+    height: auto; 
+    margin-bottom: 10px; 
+    margin-left: 20px; 
+    padding: 5px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    background-color: darkgrey;
 }
