@@ -7,6 +7,28 @@
     background-repeat: repeat-y;
 }
 
+@media screen and (min-width: 600px) {
+    .menu-mobile {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-none-mobile {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
+    }
+}
+
 .navbar {
     border-bottom: 3px solid white;
 }
@@ -24,38 +46,42 @@
     text-align: center;
 }
 
+.menu-mobile > a {
+    float: none;
+    background-color: #343a40;
+    
+}
+
 .navbar-nav > li {
     display: inline-block;
     float: none;
     transform: translateY(100%);
     background-color: #343a40;
     border-bottom: 3px solid white;
+    box-sizing:border-box
 }
 
-.squareOne {
+.square {
     width: 60px;
 	height: 40px;
     background-color: #343a40;
     position: absolute;
-    transform: translateX(-75%) translateY(-119%) rotate(45deg);
     border-bottom: 3px solid white;
     z-index: -1;
 }
 
-.squareTwo {
-    width: 60px;
-    height: 40px;
-    position: absolute;
+.squareLeft {
+    transform: translateX(-75%) translateY(-119%) rotate(45deg);
+}
+
+.squareRight {
     transform: translateX(132%) translateY(-118%) rotate(-45deg);
-    background-color: #343a40;
-    border-bottom: 3px solid white;
-    z-index: -1;
 }
 
 /* Font Setup*/
 @font-face {
     font-family: font;
-    src: url("./../assets/fonts/Starjedi.woff") format("woff");
+    src: url("./../assets/fonts/JurassicPark.woff") format("woff");
 }
 
 .font header{
@@ -66,7 +92,7 @@
 
 .font header h1 {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 3rem;
     /* margin: 16px; */
     font-family: font;
 }
