@@ -1,11 +1,25 @@
 <nav class="navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark">
 	<!-- <h1 class="navbar-brand"></h1> -->
-	<section class="font">
+	<!-- Titel lg Screen -->
+	<section class="font d-none d-sm-block">
         <header>
 			<h1 class="main-font">NollePerioden</h1>
-			<h1 class="year-font">2018</h1>
+			<h1 class="year-font screen">2018</h1>
         </header>
 	</section>
+	<!-- Titel Phone -->
+	<div style="margin-top: -15px;">
+		<section class="font d-sm-none">
+			<header>
+				<h1 class="main-font">NollePerioden</h1>
+			</header>
+		</section>
+		<section class="font d-sm-none">
+			<header>
+				<h1 class="year-font phone">2018</h1>
+			</header>
+		</section>
+	</div>
 	<button class="navbar-toggler" type="button" (click)="isExpanded = !isExpanded" data-toggle="collapse" aria-controls="navbarContent" [attr.aria-expanded]="!isExpanded">
 		<span class="navbar-toggler-icon"></span>
 	</button>

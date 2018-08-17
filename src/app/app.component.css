@@ -95,7 +95,6 @@
     transform: translateX(-50%) translateY(-40%);
     left: 50%;
     position: absolute;
-    display: inline-block;
 }
 
 .main-font {
@@ -108,4 +107,16 @@
     color: #fff;
     font-size: 1rem;
     font-family: star-jedi;
+}
+
+.screen {
+    font-size: 1.2rem; 
+    text-align: center;
+    transform: translateY(-130%);
+}
+
+.phone {
+    font-size: 1rem; 
+    text-align: center;
+    transform: translateY(100%);
 }
