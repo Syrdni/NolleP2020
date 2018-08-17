@@ -16,54 +16,38 @@
         border-bottom: 3px solid white;
         box-sizing:border-box
     }
-    
+
     .square {
-        width: 60px;
+        width: 45px;
         height: 40px;
         background-color: #343a40;
         position: absolute;
-        border-bottom: 3px solid white;
         z-index: -1;
     }
     
     .squareLeft {
-        transform: translateX(-75%) translateY(-119%) rotate(45deg);
+        transform: translateX(-69%) translateY(-105%) rotate(45deg);
     }
     
     .squareRight {
-        transform: translateX(132%) translateY(-118%) rotate(-45deg);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .menu-none-mobile {
-      visibility: hidden;
-      clear: both;
-      float: left;
-      margin: 10px auto 5px 20px;
-      width: 28%;
-      display: none;
-    }
-
-    .navbar-nav > li {
-        background-color: #343a40;
+        transform: translateX(226%) translateY(-110%) rotate(-45deg);
     }
     
-    .square {
-        width: 60px;
-        height: 40px;
-        background-color: #343a40;
+    .line {
+        width: 46px;
+        height: 3px;
+        background-color: white;
         position: absolute;
         border-bottom: 3px solid white;
-        z-index: -1;
+        z-index: 1;
     }
     
-    .squareLeft {
-        transform: translateX(-75%) translateY(-119%) rotate(45deg);
+    .lineLeft {
+        transform: translateX(-100%) translateY(-260%) rotate(45deg);
     }
     
-    .squareRight {
-        transform: translateX(132%) translateY(-118%) rotate(-45deg);
+    .lineRight {
+        transform: translateX(248%) translateY(-260%) rotate(-45deg);
     }
 }
 

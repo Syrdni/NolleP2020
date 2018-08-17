@@ -26,16 +26,16 @@
 	<div class="collapse navbar-collapse menu-mobile" *ngIf="isExpanded" id="navbarContent" [ngbCollapse]="!isExpanded">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="isExpanded = !isExpanded">Home</a>
+				<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-home"></span> Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active" (click)="isExpanded = !isExpanded">Ditt Nolle-P</a>
+				<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-user"></span> Ditt Nolle-P</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-item nav-link" routerLink="/info" routerLinkActive="active" (click)="isExpanded = !isExpanded">Kontakt</a>
+				<a class="nav-item nav-link" routerLink="/info" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-sunglasses"></span> Kontakt</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active" (click)="isExpanded = !isExpanded">Nollekampen</a>
+				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-exclamation-sign"></span> Nollekampen</a>
 			</li>
 		</ul>
 	</div>
@@ -43,28 +43,34 @@
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" routerLink="/home" routerLinkActive="active">
-					Home 
+					<span class="glyphicon glyphicon-home"></span>
+					 Home 
 					<span class="sr-only"></span>
 					<div class="square squareLeft"></div>
+					<div class="line lineLeft"></div>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" routerLink="/new-student" routerLinkActive="active">
-					Ditt Nolle-P 
+					<span class="glyphicon glyphicon-user"></span>
+					 Ditt Nolle-P 
 					<span class="sr-only"></span>
 				</a>
 			</li>
 			<li class="nav-item ">
 				<a class="nav-link" routerLink="/info" routerLinkActive="active">
-					Kontakt 
+					<span class="glyphicon glyphicon-sunglasses"></span>
+					 Kontakt
 					<span class="sr-only"></span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active">
-					Nollekampen 
+					<span class="glyphicon glyphicon-exclamation-sign"></span>
+					 Nollekampen 
 					<span class="sr-only"></span>
 					<div class="square squareRight"></div>
+					<div class="line lineRight"></div>
 				</a>
 			</li>
 		</ul>
