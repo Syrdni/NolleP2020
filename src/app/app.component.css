@@ -11,32 +11,34 @@
     .navbar-nav > li {
         display: inline-block;
         float: none;
-        transform: translateY(119%);
+        transform: translateY(127%);
         /* background-color: #343a40; */
         background-color: #bd2130;
         border-bottom: 3px solid white;
         box-sizing:border-box
     }
 
-    .square {
-        width: 55px;
-        height: 40px;
-        /* background-color: #343a40; */
-        background-color: #bd2130;
-        position: absolute;
+    .arrow {
         z-index: -1;
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        
+        border-bottom: 30px solid #bd2130;
     }
-    
-    .squareLeft {
-        transform: translateX(-76%) translateY(-113%) rotate(45deg);
+
+    .arrow-left {
+        transform: translateX(-80%) translateY(-122%) rotate(45deg);
     }
-    
-    .squareRight {
-        transform: translateX(187%) translateY(-113%) rotate(-45deg);
+
+    .arrow-right {
+        transform: translateX(174%) translateY(-122%) rotate(-45deg);
     }
     
     .line {
-        width: 58px;
+        width: 60px;
         height: 3px;
         background-color: white;
         position: absolute;
@@ -45,11 +47,11 @@
     }
     
     .lineLeft {
-        transform: translateX(-97%) translateY(-410%) rotate(45deg);
+        transform: translateX(-97%) translateY(-447%) rotate(45deg);
     }
     
     .lineRight {
-        transform: translateX(196%) translateY(-400%) rotate(-45deg);
+        transform: translateX(191%) translateY(-450%) rotate(-45deg);
     }
 }
 

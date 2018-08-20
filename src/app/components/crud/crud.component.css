@@ -22,6 +22,17 @@ hr {
     background-color: white;
 }
 
+.social-container {
+    min-height: 10vh;
+    width: 350px;
+}
+
+.social-divider-container {
+    background-color: white;
+    width: 325px; 
+    margin-top: 5px;
+}
+
 .main-container {
     /* border: 1px solid #ddd; */
     margin-top: 40px;
