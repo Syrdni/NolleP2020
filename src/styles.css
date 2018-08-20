@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     background-image: url("/assets/tiles/cartographer.png");
     background-repeat: repeat;
+    color: #656566;
 }
 
 .img-top {
@@ -22,3 +23,4 @@ body {
     font-family: star-jedi;
     src: url("/assets/fonts/Starjedi.woff") format("woff");
 }
+

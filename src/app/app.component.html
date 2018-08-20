@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark" style="background-color: #252b72;">
 	<!-- <h1 class="navbar-brand"></h1> -->
 	<!-- Titel lg Screen -->
 	<section class="font d-none d-sm-block">
@@ -26,16 +26,30 @@
 	<div class="collapse navbar-collapse menu-mobile" *ngIf="isExpanded" id="navbarContent" [ngbCollapse]="!isExpanded">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-home"></span> Home</a>
+				<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="isExpanded = !isExpanded">
+					<span class="glyphicon glyphicon-home" style="color: #33B0FF"></span> 
+					Home
+				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-user"></span> Ditt Nolle-P</a>
+				<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active" (click)="isExpanded = !isExpanded">
+					<span class="glyphicon glyphicon-user" style="color: #33B0FF"></span> 
+					Ditt Nolle-P
+				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-item nav-link" routerLink="/info" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-sunglasses"></span> Kontakt</a>
+				<a class="nav-item nav-link" routerLink="/info" routerLinkActive="active" (click)="isExpanded = !isExpanded">
+					<!-- <span class="glyphicon glyphicon-sunglasses"></span> -->
+					<img class="img-glyph img-glyph" src="/assets/questmark.png">
+					Kontakt
+				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active" (click)="isExpanded = !isExpanded"><span class="glyphicon glyphicon-exclamation-sign"></span> Nollekampen</a>
+				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active" (click)="isExpanded = !isExpanded">
+					<!-- <span class="glyphicon glyphicon-exclamation-sign" style="color: red"></span> -->
+					<img class="img-glyph img-glyph" src="/assets/pokal.png">
+					Nollekampen
+				</a>
 			</li>
 		</ul>
 	</div>
@@ -43,32 +57,36 @@
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" routerLink="/home" routerLinkActive="active">
-					<span class="glyphicon glyphicon-home"></span>
+					<span class="glyphicon glyphicon-home" style="color: #33B0FF"></span>
 					 Home 
 					<span class="sr-only"></span>
+					<div class="square" style="background-color: #252b72; transform: translateY(-180%) translateX(-85%); z-index: 2;"></div>
 					<div class="square squareLeft"></div>
 					<div class="line lineLeft"></div>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" routerLink="/new-student" routerLinkActive="active">
-					<span class="glyphicon glyphicon-user"></span>
+					<span class="glyphicon glyphicon-user" style="color: #33B0FF"></span>
 					 Ditt Nolle-P 
 					<span class="sr-only"></span>
 				</a>
 			</li>
 			<li class="nav-item ">
 				<a class="nav-link" routerLink="/info" routerLinkActive="active">
-					<span class="glyphicon glyphicon-sunglasses"></span>
+					<!-- <span class="glyphicon glyphicon-sunglasses"></span> -->
+					<img class="img-glyph img-glyph" src="/assets/questmark.png">
 					 Kontakt
 					<span class="sr-only"></span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active">
-					<span class="glyphicon glyphicon-exclamation-sign"></span>
+					<!-- <span class="glyphicon glyphicon-exclamation-sign" style="color: red"></span> -->
+					<img class="img-glyph img-glyph" src="/assets/pokal.png">
 					 Nollekampen 
 					<span class="sr-only"></span>
+					<div class="square" style="background-color: #252b72; transform: translateY(-180%) translateX(199%); z-index: 2;"></div>
 					<div class="square squareRight"></div>
 					<div class="line lineRight"></div>
 				</a>
