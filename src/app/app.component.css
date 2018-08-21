@@ -13,7 +13,7 @@
         float: none;
         transform: translateY(127%);
         /* background-color: #343a40; */
-        background-color: #bd2130;
+        background-color: #c1272d;
         border-bottom: 3px solid white;
         box-sizing:border-box
     }
@@ -26,7 +26,7 @@
         border-left: 30px solid transparent;
         border-right: 30px solid transparent;
         
-        border-bottom: 30px solid #bd2130;
+        border-bottom: 30px solid #c1272d;
     }
 
     .arrow-left {
@@ -56,12 +56,12 @@
 }
 
 .navbar-nav > li {
-    background-color: #bd2130;
+    background-color: #c1272d;
 }
 
 .navbar {
     border-bottom: 3px solid white;
-    background-color: #252b72 !important;
+    background-color: #041a8d !important;
 }
 
 .navbar-brand {
