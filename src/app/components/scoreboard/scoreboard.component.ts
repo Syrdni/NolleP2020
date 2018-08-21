@@ -10,6 +10,7 @@ export class ScoreboardComponent implements OnInit {
 
   scores: Array<object> = [];
   classImg: string = ''
+  showScore: boolean = false;
 
   token: string = 'EAAGZBxkLdw7MBAJWfDIdpQpql7rV5QnyhFiFX0qynlzGZBuAu02XxDsywLcZAymnghhQHcsIx2S5kJAY3ZCgdSzD8MHBTllksSiDqwu7i4ZAPikSOZBCadxLGPfyYnU2oNZA3D5uEi4ZBC6kY6LM9PPlSfI8vFPmEnG0i68zX5r4iQp7wjvr0cdc7xE9tdB8BoQyyLhj0ukovQZDZD';
   pageId: string = '543660139400375';
@@ -17,9 +18,17 @@ export class ScoreboardComponent implements OnInit {
   constructor(private http: Http) {  }
 
   ngOnInit() {
-    this.http.get('assets/score.json')
+    this.http.get('/assets/score.json')
     .subscribe(res => {
       // console.log(res.json());
+
+      if(res.json()[0]['class'] === 'Överphösarna') {
+        this.scores = res.json().filter(e => e.class === 'Överphösarna');
+        return;
+      }
+
+      this.showScore = !this.showScore;
+
       this.scores = this.sortByKeys(res.json());
       if(this.scores[0].hasOwnProperty('class')) {
 

@@ -5,29 +5,35 @@
 		</div> -->
 	</div>
 	<div text>
-		<img class="class-img" src="{{classImg}}" alt="">
-		<div class="container">
-			
-			<div class="col-md-12 justify-content-md-center" style="text-align: center;">
-				<!-- <div class="coin gold"></div> -->
-				<img class="gold-img" src="/assets/Oscars_GULD.png" alt="">
-				<p style="margin-bottom:0px;"><u>{{scores[0].class}}</u></p><p>{{scores[0].score}}</p>
+		<div *ngIf="!showScore">
+			<div *ngFor="let item of scores; let i = index" class="col-md-12 col-lg-12" style="text-align: center">
+				<p>{{item.score}}</p>
 			</div>
-			<div class="row justify-content-md-center" style="text-align: center;">
-				<div class="col-md-6">
-					<!-- <div class="coin silver"></div> -->
-					<img class="silver-img" src="/assets/Oscars_SILVER.png" alt="">
-					<p style="margin-bottom:0px;"><u>{{scores[1].class}}</u></p>  <p>{{scores[1].score}}</p>
+		</div>
+		<div *ngIf="showScore">
+			<img class="class-img" src="{{classImg}}" alt="">
+			<div class="container">
+				<div class="col-md-12 justify-content-md-center" style="text-align: center;">
+					<!-- <div class="coin gold"></div> -->
+					<img class="gold-img" src="/assets/Oscars_GULD.png" alt="">
+					<p style="margin-bottom:0px;"><u>{{scores[0].class}}</u></p><p>{{scores[0].score}}</p>
 				</div>
-				<div class="col-md-6" style="margin-top:18px">
-					<!-- <div class="coin bronze" style="margin-top:25px;"></div> -->
-					<img class="bronze-img" src="/assets/Oscars_BRONS.png" alt="">
-					<p style="margin-bottom:0px;"><u>{{scores[2].class}}</u></p>  <p>{{scores[2].score}}</p>
+				<div class="row justify-content-md-center" style="text-align: center;">
+					<div class="col-md-6">
+						<!-- <div class="coin silver"></div> -->
+						<img class="silver-img" src="/assets/Oscars_SILVER.png" alt="">
+						<p style="margin-bottom:0px;"><u>{{scores[1].class}}</u></p>  <p>{{scores[1].score}}</p>
+					</div>
+					<div class="col-md-6" style="margin-top:18px">
+						<!-- <div class="coin bronze" style="margin-top:25px;"></div> -->
+						<img class="bronze-img" src="/assets/Oscars_BRONS.png" alt="">
+						<p style="margin-bottom:0px;"><u>{{scores[2].class}}</u></p>  <p>{{scores[2].score}}</p>
+					</div>
 				</div>
-			</div>
-			<div class="row justify-content-md-center" style="margin-top: 20px;" >
-				<div *ngFor="let item of scores | slice:3; let i = index" class="col-md-12 col-lg-3" style="text-align: center">
-					<p style="margin-bottom:0px;"><u>{{i+4}}: {{item.class}}</u></p>  <p>{{item.score}}</p>
+				<div class="row justify-content-md-center" style="margin-top: 20px;" >
+					<div *ngFor="let item of scores | slice:3; let i = index" class="col-md-12 col-lg-3" style="text-align: center">
+						<p style="margin-bottom:0px;"><u>{{i+4}}: {{item.class}}</u></p>  <p>{{item.score}}</p>
+					</div>
 				</div>
 			</div>
 		</div>
