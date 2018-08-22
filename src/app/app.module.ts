@@ -3,6 +3,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule }            from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule }           from '@angular/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 // import { nib } from '../../node_modules/nib';
 
 import { AppComponent }        from './app.component';
@@ -11,6 +12,7 @@ import { NollepInfoComponent } from './components/nollep-info/nollep-info.compon
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
 import { NewStudentComponent } from './components/new-student/new-student.component';
 import { CrudComponent }       from './components/crud/crud.component';
+
 
 // import {RoutesArray} from './../app.routes';
 
@@ -47,7 +49,12 @@ const appRoutes: Routes = [
     ),
     HttpModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy, 
+      useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

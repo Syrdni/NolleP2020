@@ -55,6 +55,14 @@
     }
 }
 
+.mobile-style {
+    margin-top: 10px; 
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    transform: translateY(5%);
+}
+
 .navbar-nav > li {
     background-color: #c1272d;
 }
