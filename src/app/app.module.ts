@@ -12,6 +12,7 @@ import { NollepInfoComponent } from './components/nollep-info/nollep-info.compon
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
 import { NewStudentComponent } from './components/new-student/new-student.component';
 import { CrudComponent }       from './components/crud/crud.component';
+import { ActivityComponent } from './components/activity/activity.component';
 
 
 // import {RoutesArray} from './../app.routes';
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'new-student', component: NewStudentComponent },
   { path: 'info',        component: NollepInfoComponent },
   { path: 'scoreboard',  component: ScoreboardComponent },
+  { path: 'activity',    component: ActivityComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     NollepInfoComponent,
     ScoreboardComponent,
     NewStudentComponent,
-    CrudComponent
+    CrudComponent,
+    ActivityComponent
   ],
   imports: [
     NgbModule.forRoot(), // Bootstrap module
