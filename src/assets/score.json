@@ -1,54 +1,27 @@
 [
     {
-        "class":"Överphösarna",
-        "score":"Överphösarna är gudfadern"
-    },
-    {
-        "class":"Överphösarna",
-        "score":"Överphösarna hjälpte Dorothy hem ifrån Oz"
-    },
-    {
-        "class":"Överphösarna",
-        "score":"King Kong är Överphösarnas husdjur"
-    },
-    {
-        "class":"Överphösarna",
-        "score":"Överphösarna räddade Willy"
-    },
-    {
-        "class":"Överphösarna",
-        "score":"Överphösarna skapade ringen"
-    },
-    {
-        "class":"Överphösarna",
-        "score":"Överphösarna gav Bamses farmor receptet till dunderhonung"
-    },
-    {
-        "class":"Maskinteknik",
-        "score":-123231
-    },
-    {
         "class":"Datorspelsutveckling",
-        "score":1000000
+        "score":1000000,
+        "text": "blob"
     },
     {
-        "class":"Digital design",
-        "score":1000000
+        "class":"Digital_design",
+        "score":666,
+        "text": "blob"
     },
     {
         "class":"Filmdesign",
-        "score":593
-    }
-    ,    {
-        "class":"Ekonomi",
-        "score":-2344
-    }
-    ,    {
-        "class":"Nätverk",
-        "score":2345
+        "score":666,
+        "text": "blob"
     },
     {
-        "class":"Basår",
-        "score":5000
+        "class":"Ekonomi_&_Basår",
+        "score":-22344,
+        "text": "blob"
+    },
+    {
+        "class":"Maskinteknik_&_Nätverk",
+        "score":-22222222345,
+        "text": "blob"
     }
 ]

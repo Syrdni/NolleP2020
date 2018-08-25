@@ -20,7 +20,6 @@ export class ScoreboardComponent implements OnInit {
   ngOnInit() {
     this.http.get('/assets/score.json')
     .subscribe(res => {
-      // console.log(res.json());
 
       if(res.json()[0]['class'] === 'Överphösarna') {
         this.scores = res.json().filter(e => e.class === 'Överphösarna');
@@ -29,24 +28,24 @@ export class ScoreboardComponent implements OnInit {
 
       this.showScore = !this.showScore;
 
+      /// Sort score in ascending order
       this.scores = this.sortByKeys(res.json());
+
       if(this.scores[0].hasOwnProperty('class')) {
 
-        let foundSpace = this.scores[0]['class'].indexOf(' ');
-        if(foundSpace !== -1) {
-          this.classImg = `/assets/Patches/Irl/${this.scores[0]['class'].replace(' ','_')}.png`;
-          return;
-        }
+        // let foundSpace = this.scores[0]['class'].indexOf(' ');
+        // if(foundSpace !== -1) {
+        //   this.classImg = `/assets/Patches/Irl/${this.scores[0]['class'].replace(' ','_')}.png`;
+        //   return;
+        // }
 
+        /// Get correct class image
         this.classImg = `/assets/Patches/Irl/${this.scores[0]['class']}.png`;
+
+        /// Replace '_' with space
+        // this.scores.map(e => e['class'].replace('_', ' '));    
       }
     }, error => console.log('Failed to load values!', error));
-
-    //491233711342515|QTaovk3hs1mjSdEYFuHGCOeax3s
-    // this.http.get(`https://graph.facebook.com/${this.pageId}/posts?access_token=${this.token}`)
-    // .subscribe(res => {
-    //   console.log(res.json());
-    // }, error => console.log('Blob!', error));
   }
 
   /// Easy enough so insertion sort can be used

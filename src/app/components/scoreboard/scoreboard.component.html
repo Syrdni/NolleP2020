@@ -11,28 +11,46 @@
 			</div>
 		</div>
 		<div *ngIf="showScore">
-			<img class="class-img" src="{{classImg}}" alt="">
+			<img class="class-img col-xs-12 col-sm-12 col-md-12 col-lg-12" src="{{classImg}}" alt="">
 			<div class="container">
 				<div class="col-md-12 justify-content-md-center" style="text-align: center;">
 					<!-- <div class="coin gold"></div> -->
 					<img class="gold-img" src="/assets/Oscars_GULD.png" alt="">
-					<p style="margin-bottom:0px;"><u>{{scores[0].class}}</u></p><p>{{scores[0].score}}</p>
+					<p style="margin-bottom:0px;"><u>{{scores[0].class}}</u></p><p>{{scores[0].text}}</p>
 				</div>
-				<div class="row justify-content-md-center" style="text-align: center;">
-					<div class="col-md-6">
-						<!-- <div class="coin silver"></div> -->
-						<img class="silver-img" src="/assets/Oscars_SILVER.png" alt="">
-						<p style="margin-bottom:0px;"><u>{{scores[1].class}}</u></p>  <p>{{scores[1].score}}</p>
+				<!-- Show Silver and Bronz -->
+				<div *ngIf="scores[1].score != scores[2].score">
+					<div class="row justify-content-md-center" style="text-align: center;">
+						<div class="col-md-6">
+							<!-- <div class="coin silver"></div> -->
+							<img class="silver-img" src="/assets/Oscars_SILVER.png" alt="">
+							<p style="margin-bottom:0px;"><u>{{scores[1].class}}</u></p>  <p>{{scores[1].text}}</p>
+						</div>
+						<div class="col-md-6" style="margin-top:18px">
+							<!-- <div class="coin bronze" style="margin-top:25px;"></div> -->
+							<img class="bronze-img" src="/assets/Oscars_BRONS.png" alt="">
+							<p style="margin-bottom:0px;"><u>{{scores[2].class}}</u></p>  <p>{{scores[2].text}}</p>
+						</div>
 					</div>
-					<div class="col-md-6" style="margin-top:18px">
-						<!-- <div class="coin bronze" style="margin-top:25px;"></div> -->
-						<img class="bronze-img" src="/assets/Oscars_BRONS.png" alt="">
-						<p style="margin-bottom:0px;"><u>{{scores[2].class}}</u></p>  <p>{{scores[2].score}}</p>
+				</div>
+				<!-- Show two silver -->
+				<div *ngIf="scores[1].score === scores[2].score">
+					<div class="row justify-content-md-center" style="text-align: center;">
+						<div class="col-md-6">
+							<!-- <div class="coin silver"></div> -->
+							<img class="silver-img" src="/assets/Oscars_SILVER.png" alt="">
+							<p style="margin-bottom:0px;"><u>{{scores[1].class}}</u></p>  <p>{{scores[1].text}}</p>
+						</div>
+						<div class="col-md-6">
+							<!-- <div class="coin bronze" style="margin-top:25px;"></div> -->
+							<img class="silver-img" src="/assets/Oscars_SILVER.png" alt="">
+							<p style="margin-bottom:0px;"><u>{{scores[2].class}}</u></p>  <p>{{scores[2].text}}</p>
+						</div>
 					</div>
 				</div>
 				<div class="row justify-content-md-center" style="margin-top: 20px;" >
-					<div *ngFor="let item of scores | slice:3; let i = index" class="col-md-12 col-lg-3" style="text-align: center">
-						<p style="margin-bottom:0px;"><u>{{i+4}}: {{item.class}}</u></p>  <p>{{item.score}}</p>
+					<div *ngFor="let item of scores | slice:3; let i = index" class="col-md-12 col-lg-4" style="text-align: center">
+						<p style="margin-bottom:0px;"><u>{{i+4}}: {{item.class}}</u></p>  <p>{{item.text}}</p>
 					</div>
 				</div>
 			</div>
