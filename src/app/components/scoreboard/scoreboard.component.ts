@@ -43,7 +43,11 @@ export class ScoreboardComponent implements OnInit {
         this.classImg = `/assets/Patches/Irl/${this.scores[0]['class']}.png`;
 
         /// Replace '_' with space
-        // this.scores.map(e => e['class'].replace('_', ' '));    
+        this.scores.map(e => {
+          if(e.hasOwnProperty('class')) {
+            e['class'] = e['class'].split('_').join(' ');
+          }
+        }); 
       }
     }, error => console.log('Failed to load values!', error));
   }
