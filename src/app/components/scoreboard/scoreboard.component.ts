@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 @Component({
   selector: 'scoreboard',
   templateUrl: './scoreboard.component.html',
-  styleUrls: ['./scoreboard.component.css']
+  styleUrls: ['./scoreboard.component.less']
 })
 export class ScoreboardComponent implements OnInit {
 

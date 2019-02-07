@@ -3,14 +3,21 @@
 		<!-- <div class="d-none d-sm-block col-sm-1 col-md-1 col-lg-1"></div> -->
 		<div class="d-none d-sm-block col-sm-1 col-md-1 col-lg-1 sponsor-container box-shadow">
 			<p style="margin-bottom: 3px">Hostad av</p>
-			<div *ngFor="let image of images; let i = index">
+			<div *ngFor="let image of sponsImgs; let i = index">
 				<hr style="margin-top: 5px; margin-bottom: 8px;"/>
 				<img class="card-img-top sponsor-lg-screen" src="{{image}}" alt="Card image cap">
 			</div>
 		</div>
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 main-container box-shadow marginsLR">
 			<br>
-			<ng-content select="[picture]"></ng-content>
+			<!-- <ng-content select="[picture]"></ng-content> -->
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="false">
+				<div class="carousel-inner">
+					<div *ngFor="let image of images; let i = index" [ngClass]="i === 0 ? 'carousel-item active' : 'carousel-item'">
+						<img class="img-top" [src]="image" alt="{{i}}">
+					</div>
+				</div>
+			</div>
 			<br>
 			<hr>
 			<br>
@@ -32,7 +39,7 @@
 		<div class="d-sm-none col-xs-1 col-sm-1 sponsor-container box-shadow marginsLR">
 			<p style="margin-bottom: 3px">Hostad av</p>
 			<hr style="margin-top: 5px; margin-bottom: 8px;"/>
-			<div *ngFor="let image of images; let i = index" style="display: inline-block">
+			<div *ngFor="let image of sponsImgs; let i = index" style="display: inline-block">
 				<img class="card-img-top sponsor-phone" src="{{image}}">
 			</div>
 		</div>
