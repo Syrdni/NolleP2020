@@ -13,6 +13,7 @@ import { ScoreboardComponent } from './components/scoreboard/scoreboard.componen
 import { NewStudentComponent } from './components/new-student/new-student.component';
 import { CrudComponent }       from './components/crud/crud.component';
 import { ActivityComponent } from './components/activity/activity.component';
+import { SocialMediasComponent } from './components/crud/helpers/social-medias/social-medias.component';
 
 
 // import {RoutesArray} from './../app.routes';
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     ScoreboardComponent,
     NewStudentComponent,
     CrudComponent,
-    ActivityComponent
+    ActivityComponent,
+    SocialMediasComponent
   ],
   imports: [
     NgbModule.forRoot(), // Bootstrap module
