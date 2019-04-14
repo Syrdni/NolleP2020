@@ -48,9 +48,12 @@ hr {
 }
 
 .social-background {
-    border-radius: 50%;
-	width: @backgroundPc;
-    height: @backgroundPc;
+    border-radius: 80%;
+	width: 35px;
+    height: 45px;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+    z-index:10;
+    transform-origin:bottom center;
 
     @media screen and (max-width: 600px) {
         width:  @backgroundMobile;
@@ -65,6 +68,34 @@ hr {
         opacity: 0.5;
         cursor: pointer;
     }
+}
+
+.social-background.facebook:before {
+    content:"▲";
+    font-size: 12px;
+    color: #007bff;
+    display: inline-block;
+    text-align: center;
+    transform: translate(-50%, 176%);
+}
+
+.social-background.instagram:before {
+    content:"▲";
+    font-size: 12px;
+    // background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: #fdf497;
+    display: inline-block;
+    text-align: center;
+    transform: translate(-50%, 176%);
+}
+
+.social-background.discord:before {
+    content:"▲";
+    font-size: 12px;
+    color: #4a67cf;
+    display: inline-block;
+    text-align: center;
+    transform: translate(-50%, 176%);
 }
 
 .social-background.facebook {
