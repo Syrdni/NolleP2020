@@ -8,7 +8,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent }        from './app.component';
 import { HomeComponent }       from './components/home/home.component';
-import { NollepInfoComponent } from './components/nollep-info/nollep-info.component';
+import { VoteComponent } from './components/vote/vote.component';
 import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
 import { NewStudentComponent } from './components/new-student/new-student.component';
 import { CrudComponent }       from './components/crud/crud.component';
@@ -24,7 +24,7 @@ import { SocialMediasComponent } from './components/crud/helpers/social-medias/s
 const appRoutes: Routes = [
   { path: 'home',        component: HomeComponent },
   { path: 'new-student', component: NewStudentComponent },
-  { path: 'info',        component: NollepInfoComponent },
+  { path: 'vote',        component: VoteComponent },
   { path: 'scoreboard',  component: ScoreboardComponent },
   { path: 'activity',    component: ActivityComponent },
   { path: '',
@@ -38,7 +38,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    NollepInfoComponent,
+    VoteComponent,
     ScoreboardComponent,
     NewStudentComponent,
     CrudComponent,
