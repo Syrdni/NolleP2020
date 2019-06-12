@@ -1,0 +1,35 @@
+<div class="mobile-menu-balloon" (click)="isExpanded = !isExpanded" data-toggle="collapse" [attr.aria-expanded]="!isExpanded">
+	<div class="hamburger-placement">
+		<i class="fas fa-bars"></i>
+	</div>
+</div>
+
+<div id="mySidebar" class="sidebar" [ngStyle]="{'width.px': isExpanded ? 250 : 0}">
+	<a class="closebtn" (click)="isExpanded = !isExpanded">&times;</a>
+	<div style="margin: 10px 0 10px">
+		<button class="btn btn-block btn-success" (click)="isExpanded = !isExpanded" routerLink="/vote" routerLinkActive="active">
+			<span class="fas fa-person-booth" style="color: white"></span>
+			Rösta
+		</button>
+		<button class="btn btn-block btn-danger" (click)="isExpanded = !isExpanded" routerLink="/activity" routerLinkActive="active">
+			<img class="img-glyph" src="/assets/questmark.png">
+			Aktivitet
+		</button>
+		<button class="btn btn-block btn-danger" (click)="isExpanded = !isExpanded" routerLink="/scoreboard" routerLinkActive="active">
+			<img class="img-glyph" src="/assets/pokal.png">
+			Nollekampen
+		</button>
+		<button class="btn btn-block btn-dark" (click)="isExpanded = !isExpanded" routerLink="/home" routerLinkActive="active">
+			<span class="fas fa-home"></span>
+			Hem
+		</button>
+		<button class="btn btn-block btn-dark" (click)="isExpanded = !isExpanded" routerLink="/new-student" routerLinkActive="active">
+			<span class="fas fa-users"></span>
+			Ditt Nolle-P
+		</button>
+		<button class="btn btn-block btn-dark">
+			<span class="fas fa-gamepad"></span>
+			Spel
+		</button>
+	</div>
+</div>

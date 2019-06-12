@@ -14,6 +14,8 @@ import { NewStudentComponent } from './components/new-student/new-student.compon
 import { CrudComponent }       from './components/crud/crud.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { SocialMediasComponent } from './components/crud/helpers/social-medias/social-medias.component';
+import { MobileMenuComponent } from './components/crud/helpers/mobile-menu/mobile-menu.component';
+import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
 
 
 // import {RoutesArray} from './../app.routes';
@@ -43,7 +45,9 @@ const appRoutes: Routes = [
     NewStudentComponent,
     CrudComponent,
     ActivityComponent,
-    SocialMediasComponent
+    SocialMediasComponent,
+    MobileMenuComponent,
+    ImageCarouselComponent
   ],
   imports: [
     NgbModule.forRoot(), // Bootstrap module

@@ -19,92 +19,11 @@
 			</header>
 		</section>
 	</div>
-	<!-- <div class="collapse navbar-collapse menu-none-mobile" id="navbarContent">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" routerLink="/home" routerLinkActive="active">
-					<span class="glyphicon glyphicon-home" style="color: #33B0FF"></span>
-						Home 
-					<span class="sr-only"></span>
-					<div class="arrow arrow-left"></div>
-					<div class="line lineLeft"></div>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" routerLink="/new-student" routerLinkActive="active">
-					<span class="glyphicon glyphicon-user" style="color: #33B0FF"></span>
-						Ditt Nolle-P 
-					<span class="sr-only"></span>
-				</a>
-			</li>
-			<li class="nav-item ">
-				<a class="nav-link" routerLink="/activity" routerLinkActive="active">
-					<img class="img-glyph img-glyph" src="/assets/questmark.png">
-						Aktivitet
-					<span class="sr-only"></span>
-				</a>
-			</li>
-			<li class="nav-item ">
-				<a class="nav-link" routerLink="/info" routerLinkActive="active">
-					<span class="glyphicon glyphicon-earphone" style="color: #33B0FF"></span>
-						Kontakt
-					<span class="sr-only"></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active">
-					<img class="img-glyph img-glyph" src="/assets/pokal.png">
-						Nollekampen 
-					<span class="sr-only"></span>
-					<div class="arrow arrow-right"></div>
-					<div class="line lineRight"></div>
-				</a>
-			</li>
-		</ul>
-	</div> -->
 </nav>
 
-<div class="container-fluid" style="margin-bottom:15px;">
-	<div class="row hide-mobile-menu">
-		<button class="col btn btn-success" routerLink="/vote" routerLinkActive="active">
-			<span class="fas fa-person-booth"></span>
-			Rösta
-		</button>
-		<button class="col btn btn-danger" routerLink="/activity" routerLinkActive="active">
-			<img class="img-glyph img-glyph" src="/assets/questmark.png">
-			Aktivitet
-		</button>
-		<button class="col btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Allmänt
-		</button>
-		<div class="dropdown-menu">
-			<a class="nav-link" routerLink="/scoreboard" routerLinkActive="active">
-				<img class="img-glyph img-glyph" src="/assets/pokal.png">
-				Nollekampen
-			</a>
-			<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">
-				<span class="fas fa-home" style="color: #33B0FF"></span>
-				Hem
-			</a>
-			<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active">
-				<span class="fas fa-users" style="color: #33B0FF"></span> 
-				Ditt Nolle-P
-			</a>
-			<a class="nav-item nav-link" routerLink="/new-student" routerLinkActive="active">
-				<span class="fas fa-gamepad" style="color: #33B0FF"></span> 
-				Spel
-			</a>
-		</div>
-	</div>	
-</div>
+<mobile-menu></mobile-menu>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="false">
-	<div class="carousel-inner">
-		<div *ngFor="let image of images; let i = index" [ngClass]="i === 0 ? 'carousel-item active' : 'carousel-item'">
-			<img class="img-top" [src]="image" alt="{{i}}">
-		</div>
-	</div>
-</div>
+<image-carousel></image-carousel>
 
 <router-outlet></router-outlet>
 	
