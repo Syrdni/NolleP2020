@@ -13,18 +13,38 @@
 
 .fa-laugh {
     color: Green;
-    transform: translateY(75%);
+    @media screen and (min-width: 600px) {
+        transform: translateY(75%);
+    }
+
+    @media screen and (max-width: 600px) {
+        transform: translate(-95%, 100%);
+    }
 }
 
 .fa-grin {
     color: greenyellow;
+
+    @media screen and (max-width: 600px) {
+        transform: translateX(-20%);
+    }
 }
 
 .fa-frown {
     color: yellow;
+
+    @media screen and (max-width: 600px) {
+        transform: translateY(-100%);
+    }
 }
 
 .fa-frown-open {
     color: red;
-    transform: translateY(75%);
+    @media screen and (min-width: 600px) {
+        transform: translateY(75%);
+    }
+
+    @media screen and (max-width: 600px) {
+        transform: translateX(60%);
+    }
 }

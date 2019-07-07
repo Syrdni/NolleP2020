@@ -1,25 +1,17 @@
 <div class="container-fluid crimson-bg" style="padding-bottom: 30px; margin-top:20px;">
 	<div class="row justify-content-md-center align-items-start">
 		<div class="d-none d-sm-block col-sm-2 col-md-2 col-lg-2 side-container box-shadow">
-			<social-medias></social-medias>
 			<p style="margin-bottom: 3px">Hostad av</p>
 			<div *ngFor="let image of sponsImgs; let i = index">
 				<hr style="margin-top: 5px; margin-bottom: 8px;"/>
 				<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
 			</div>
+			<social-medias></social-medias>
 		</div>
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 main-container box-shadow marginsLR">
 			<br>
-			<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="false">
-				<div class="carousel-inner">
-					<div *ngFor="let image of images; let i = index" [ngClass]="i === 0 ? 'carousel-item active' : 'carousel-item'">
-						<img class="img-top" [src]="image" alt="{{i}}">
-					</div>
-				</div>
-			</div>
 			<br>
-			<hr>
-			<br> -->
+			<br>
 			<ng-content select="[text]"></ng-content>
 			<br>
 		</div>
@@ -54,12 +46,12 @@
 		</div>
 		<!-- sideS ON CELLPHONE #3B5998 #125688 -->
 		<div class="d-sm-none col-xs-1 col-sm-1 side-container box-shadow marginsLR">
-			<social-medias></social-medias>
 			<p style="margin-bottom: 3px">Hostad av</p>
 			<hr style="margin-top: 5px; margin-bottom: 8px;"/>
 			<div *ngFor="let image of sponsImgs; let i = index" style="display: inline-block">
 				<img class="sponsor-img side-phone" src="{{image}}">
 			</div>
+			<social-medias></social-medias>
 		</div>
 	</div>
 </div>
