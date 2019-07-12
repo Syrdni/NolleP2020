@@ -2,19 +2,20 @@ import { BrowserModule }        from '@angular/platform-browser';
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule }            from '@ng-bootstrap/ng-bootstrap';
-import { HttpModule }           from '@angular/http';
+// import { HttpModule }           from '@angular/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 // import { nib } from '../../node_modules/nib';
 
-import { AppComponent }        from './app.component';
-import { HomeComponent }       from './components/home/home.component';
-import { VoteComponent } from './components/vote/vote.component';
-import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
-import { NewStudentComponent } from './components/new-student/new-student.component';
-import { CrudComponent }       from './components/crud/crud.component';
-import { ActivityComponent } from './components/activity/activity.component';
-import { SocialMediasComponent } from './components/crud/helpers/social-medias/social-medias.component';
-import { MobileMenuComponent } from './components/crud/helpers/mobile-menu/mobile-menu.component';
+import { AppComponent }           from './app.component';
+import { HomeComponent }          from './components/home/home.component';
+import { VoteComponent }          from './components/vote/vote.component';
+import { ScoreboardComponent }    from './components/scoreboard/scoreboard.component';
+import { NewStudentComponent }    from './components/new-student/new-student.component';
+import { CrudComponent }          from './components/crud/crud.component';
+import { ActivityComponent }      from './components/activity/activity.component';
+import { SocialMediasComponent }  from './components/crud/helpers/social-medias/social-medias.component';
+import { MobileMenuComponent }    from './components/crud/helpers/mobile-menu/mobile-menu.component';
 import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
 
 
@@ -56,7 +57,8 @@ const appRoutes: Routes = [
       appRoutes,
       // { enableTracing: true } // debugging purposes only
     ),
-    HttpModule,
+    // HttpModule,
+    HttpClientModule
   ],
   providers: [
     {

@@ -1,8 +1,9 @@
+<!-- <div class="circle-frame"></div> -->
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="false" style="margin-top:15px;">
 	<div class="carousel-inner">
 		<div *ngFor="let image of images; let i = index" [ngClass]="i === 0 ? 'carousel-item active' : 'carousel-item'">
-			<img class="img-top" [src]="image" alt="{{i}}">
+			<img class="position img-carousel" [src]="image" alt="{{i}}">
 		</div>
 	</div>
 </div>
