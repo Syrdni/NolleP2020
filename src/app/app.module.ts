@@ -7,6 +7,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 // import { nib } from '../../node_modules/nib';
 
+import { Globals } from '../globals'
+
 import { AppComponent }           from './app.component';
 import { HomeComponent }          from './components/home/home.component';
 import { VoteComponent }          from './components/vote/vote.component';
@@ -60,11 +62,11 @@ const appRoutes: Routes = [
     // HttpModule,
     HttpClientModule
   ],
-  providers: [
-    {
+  providers: [{
       provide: LocationStrategy, 
-      useClass: HashLocationStrategy
-    }
+      useClass: HashLocationStrategy,
+    },
+    Globals
   ],
   bootstrap: [AppComponent]
 })
