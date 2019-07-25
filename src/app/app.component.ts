@@ -9,8 +9,8 @@ import { Title } from "@angular/platform-browser";
 	styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-	year:  string;
 	title: string;
+	year:  number;
 
 	constructor(private globals: Globals, private ts: Title) {
 		this.title = 'Nolleperioden';

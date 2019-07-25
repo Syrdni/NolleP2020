@@ -2,5 +2,5 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
-  year: string = new Date().getFullYear();
+  year: number = new Date().getFullYear();
 }
