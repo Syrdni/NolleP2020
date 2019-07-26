@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NollepInfoComponent } from './nollep-info.component';
+import { ImageCarouselComponent } from './image-carousel.component';
 
-describe('NollepInfoComponent', () => {
-  let component: NollepInfoComponent;
-  let fixture: ComponentFixture<NollepInfoComponent>;
+describe('ImageCarouselComponent', () => {
+  let component: ImageCarouselComponent;
+  let fixture: ComponentFixture<ImageCarouselComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NollepInfoComponent ]
+      declarations: [ ImageCarouselComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NollepInfoComponent);
+    fixture = TestBed.createComponent(ImageCarouselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
