@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudComponent implements OnInit {
 
-  sponsImgs: Array<string> = [];
+  sponsImgs:     Array<string> = [];
+  coWorkersImgs: Array<string> = [];
 
   constructor() { 
-    this.sponsImgs = ['assets/sponsors/nordskenlogo.png'];
+    let pathSpons     = 'assets/sponsors/';
+    let pathCoWorkers = 'assets/coworkers/';
+
+    this.sponsImgs     = [`${pathSpons}/abf.png`, `${pathSpons}/skebo.png`, `${pathSpons}/sammes.png`];
+    this.coWorkersImgs = [`${pathCoWorkers}/campus.png`, `${pathCoWorkers}/ltu.png`, `${pathCoWorkers}/tkl.png`, ];
 
     // console.log(this);
   }

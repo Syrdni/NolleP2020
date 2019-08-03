@@ -1,3 +1,5 @@
+@brace-color: #fff;
+
 // @media screen and (min-width: 600px) {
 // 	.hide-mobile-menu {
 // 		visibility: hidden;
@@ -92,26 +94,34 @@
 // 	position: absolute;
 // }
 
-.main-font {
+.main-title {
     color: #fff;
 	font-size: 3.5rem;
+	display: block;
 	text-align: center;
-    font-family: Georgia;
+	font-family: Georgia;
+	height: 100px;
+	margin-top: 5px;
+	text-decoration: overline underline  #ff1a68;
 }
 
-.year-font {
-    color: #fff;
-    font-size: 2.6rem;
-    text-align: center;
-	transform: translate(3%, -50%);
+.year-title {
+	content: ' - 2019';
+	color: #fff;
+	font-size: 2.6rem;
+	text-align: center;
+	transform: translateY(-50%);
 	@media screen and (max-width: 600px) {
-		transform: translate(10%, -40%);
+		transform: translateY(-30%);
 	}
-    font-family: Georgia;
+	font-family: Georgia;
+	display: block;
+	text-align: center;
+	margin-left: 50px;
+	text-decoration: none;
 }
 
-
-
+/// Images for buttons in the navigation menu
 .img-glyph {
 	height: 17px;
 	width: auto;

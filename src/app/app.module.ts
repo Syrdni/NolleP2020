@@ -2,9 +2,10 @@ import { BrowserModule }        from '@angular/platform-browser';
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule }            from '@ng-bootstrap/ng-bootstrap';
-// import { HttpModule }           from '@angular/http';
+import { HttpModule }           from '@angular/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule }     from '@angular/common/http';
+import { CookieService }        from 'ngx-cookie-service';
 // import { nib } from '../../node_modules/nib';
 
 import { Globals } from '../globals'
@@ -19,6 +20,7 @@ import { ActivityComponent }      from './components/activity/activity.component
 import { SocialMediasComponent }  from './components/crud/helpers/social-medias/social-medias.component';
 import { MobileMenuComponent }    from './components/crud/helpers/mobile-menu/mobile-menu.component';
 import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
+import { TitleComponent }         from './components/crud/helpers/title/title.component';
 
 
 // import {RoutesArray} from './../app.routes';
@@ -32,10 +34,7 @@ const appRoutes: Routes = [
   { path: 'vote',        component: VoteComponent },
   { path: 'scoreboard',  component: ScoreboardComponent },
   { path: 'activity',    component: ActivityComponent },
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: AppComponent }
 ];
 
@@ -50,7 +49,8 @@ const appRoutes: Routes = [
     ActivityComponent,
     SocialMediasComponent,
     MobileMenuComponent,
-    ImageCarouselComponent
+    ImageCarouselComponent,
+    TitleComponent
   ],
   imports: [
     NgbModule.forRoot(), // Bootstrap module
@@ -59,14 +59,15 @@ const appRoutes: Routes = [
       appRoutes,
       // { enableTracing: true } // debugging purposes only
     ),
-    // HttpModule,
+    HttpModule,
     HttpClientModule
   ],
   providers: [{
       provide: LocationStrategy, 
       useClass: HashLocationStrategy,
     },
-    Globals
+    Globals,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

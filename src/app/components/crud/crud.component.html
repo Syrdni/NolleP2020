@@ -1,13 +1,21 @@
 <div class="container-fluid crimson-bg" style="padding-bottom: 30px; margin-top:20px;">
 	<div class="row justify-content-md-center align-items-start">
-		<div class="d-none d-sm-block col-sm-2 col-md-2 col-lg-2 side-container box-shadow">
-			<p style="margin-bottom: 3px">Hostad av</p>
+		<div class="offset-sm-1 offset-md-1 offset-lg-1"></div>
+		<div class="d-none d-sm-block col-sm-2 col-md-1 col-lg-1 side-container box-shadow">
+			<social-medias></social-medias>
+			<div class="arrow">
+				<p>Sponsorer</p>
+			</div>
 			<div *ngFor="let image of sponsImgs; let i = index">
-				<hr style="margin-top: 5px; margin-bottom: 8px;"/>
 				<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
 			</div>
-			<social-medias></social-medias>
-		</div>
+			<div class="arrow">
+				<p>Samarbetspartners</p>
+			</div>
+			<div *ngFor="let image of coWorkersImgs; let i = index">
+				<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
+			</div>
+		</div> 
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 main-container box-shadow marginsLR">
 			<br>
 			<br>
@@ -24,7 +32,7 @@
 				</button>
 				<button class="btn btn-block btn-danger" routerLink="/activity" routerLinkActive="active">
 					<img class="img-glyph" src="/assets/questmark.png">
-					Aktivitet
+					&nbsp;&nbsp;&nbsp;Aktivitet
 				</button>
 				<button class="btn btn-block btn-danger" routerLink="/scoreboard" routerLinkActive="active">
 					<img class="img-glyph" src="/assets/pokal.png">
@@ -36,22 +44,54 @@
 				</button>
 				<button class="btn btn-block btn-dark" routerLink="/new-student" routerLinkActive="active">
 					<span class="fas fa-users"></span>
+					Brev Till Nollan!
+				</button>
+				<button class="btn btn-block btn-dark" routerLink="/new-student" routerLinkActive="active">
+					<span class="fas fa-users"></span>
 					Ditt Nolle-P
 				</button>
 				<button class="btn btn-block btn-dark">
 					<span class="fas fa-gamepad"></span>
 					Spel
 				</button>
+				<!--
+				<a class="button-styling colorVote" routerLink="/vote" routerLinkActive="active">
+					<span>Rösta</span>
+				</a>
+				<a class="button-styling colorActivity" routerLink="/activity" routerLinkActive="active">
+					<span>Aktivitet</span>
+				</a>
+				<a class="button-styling colorNollekampen" routerLink="/scoreboard" routerLinkActive="active">
+					<span>Nollekampen</span>
+				</a>
+				<a class="button-styling colorHome" routerLink="/home" routerLinkActive="active">
+					<span>Hem</span>
+				</a>
+				<a class="button-styling colorYourNollep" routerLink="/new-student" routerLinkActive="active">
+					<span>Ditt Nolle-P</span>
+				</a>
+				<a class="button-styling colorGame">
+					<span>Spel</span>
+				</a>
+			</div>
+				-->
 			</div>
 		</div>
 		<!-- sideS ON CELLPHONE #3B5998 #125688 -->
-		<div class="d-sm-none col-xs-1 col-sm-1 side-container box-shadow marginsLR">
-			<p style="margin-bottom: 3px">Hostad av</p>
-			<hr style="margin-top: 5px; margin-bottom: 8px;"/>
+		<div class="d-sm-none col-xs-1 col-sm-1 side-container box-shadow marginsLR" style="margin-top: 30px;">
+			<social-medias></social-medias>
+			<div class="arrow">
+				<p>Sponsorer</p>
+			</div>
 			<div *ngFor="let image of sponsImgs; let i = index" style="display: inline-block">
 				<img class="sponsor-img side-phone" src="{{image}}">
 			</div>
-			<social-medias></social-medias>
+			<div class="arrow">
+				<p >Samarbetspartners</p>
+			</div>
+			<div *ngFor="let image of coWorkersImgs; let i = index" style="display: inline-block">
+				<img class="sponsor-img side-phone" src="{{image}}">
+			</div>
 		</div>
 	</div>
 </div>

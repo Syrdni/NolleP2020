@@ -124,3 +124,22 @@ hr {
 .social-background.discord {
     background: #4a67cf;
 }
+
+.arrow {
+    position: relative;
+    border-left:  22px solid rgba(238, 21, 68, 0.85);
+    border-right: 22px solid transparent;
+    border-top:   22px solid rgba(238, 21, 68, 0.85);
+    margin: 0 -15px 0 -15px;
+
+    > p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        transform: translate(-15px, -25px);
+        @media screen and (max-width: 600px) {
+            transform: translate(-15px, -24px);
+        }
+    }
+}

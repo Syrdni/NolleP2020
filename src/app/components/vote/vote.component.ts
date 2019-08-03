@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Headers, RequestOptions } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ApiService } from '../../api.service';
+import { Headers } from '@angular/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'vote',
@@ -9,17 +11,37 @@ import { Headers, RequestOptions } from '@angular/http';
 })
 export class VoteComponent implements OnInit {
 
-  constructor(public http: HttpClient) { }
+	options: Array<string>;
+	url: string;
+	headers: HttpHeaders;
 
-  ngOnInit() {
-	this.http.get<any>('https://strawpoll.me/api/v2/polls/18285079').subscribe(e => {
-		console.log(e);
-	  });
-  }
+	constructor(public http: HttpClient, private apiService: ApiService, private cookieService: CookieService) { 
+		this.options = [];
+		// this.headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9' });
+	}
 
-  vote(vote: string) {
-	// let headers = new Headers({ 'Content-Type': 'application/json' });
-    // let data    = new RequestOptions({ headers : headers });
-	// this.http.post('https://strawpoll.me/api/v2/polls/18285079',headers, data);
-  }
+	ngOnInit() {
+		this.apiService.read().subscribe((res: any[])=> {
+			console.log(res);
+		}, (e: any) => console.log("Error " + e));
+	}
+	
+	vote(vote: any) {
+		this.http.get('/assets/event.json')
+    	.subscribe((res: any) => {
+			let event = res[0].event;
+			let uuid = this.cookieService.get(event);
+
+			let obj = {
+				vote: vote,
+				event: event,
+				uuid: uuid
+			};
+
+			this.apiService.create(obj).subscribe((res: any)=>{
+				console.log("Entry created, ", res);
+			});
+		})
+
+	}
 }

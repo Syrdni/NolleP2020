@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { Globals } from '../globals';
+import * as uuid from 'uuid';
+import * as moment from 'moment';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClient } from '@angular/common/http';
 
 import { Title } from "@angular/platform-browser";
 
@@ -12,10 +16,33 @@ export class AppComponent {
 	title: string;
 	year:  number;
 
-	constructor(private globals: Globals, private ts: Title) {
+	constructor(private globals: Globals, private ts: Title, private cookieService: CookieService, private http: HttpClient) {
 		this.title = 'Nolleperioden';
 		this.year  = globals.year;
 
 		this.ts.setTitle(`Nolle-p ${this.year}`);
+	}
+
+	ngOnInit() {
+		this.genUUID();
+	}
+
+	genUUID() {
+		this.http.get('/assets/event.json')
+    	.subscribe((res: any) => {
+			let date = res[0].date;
+			let event = res[0].event;
+			let found = Object.keys(this.cookieService.getAll()).find(e => e === event);
+
+			if(found) {
+				return;
+			}
+			
+			date = moment(date)
+						.add(1, 'day')
+						.subtract(5, 'minutes')
+						.format('YYYY-MM-DD HH:mm:ss');
+			this.cookieService.set(event, uuid.v4(), new Date(date), '/');
+		});
 	}
 }
