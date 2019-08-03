@@ -1,19 +1,26 @@
 <div class="container-fluid crimson-bg" style="padding-bottom: 30px; margin-top:20px;">
 	<div class="row justify-content-md-center align-items-start">
-		<div class="offset-sm-1 offset-md-1 offset-lg-1"></div>
-		<div class="d-none d-sm-block col-sm-2 col-md-1 col-lg-1 side-container box-shadow">
+		<div class="d-none d-sm-block col-sm-2 col-md-2 col-lg-2 side-container box-shadow">
 			<social-medias></social-medias>
 			<div class="arrow">
 				<p>Sponsorer</p>
 			</div>
-			<div *ngFor="let image of sponsImgs; let i = index">
-				<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
+			<div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+				<div *ngFor="let image of sponsImgs; let i = index">
+					<div class="col-lg-6">
+						<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
+					</div>
+				</div>
 			</div>
 			<div class="arrow">
 				<p>Samarbetspartners</p>
 			</div>
-			<div *ngFor="let image of coWorkersImgs; let i = index">
-				<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
+			<div class="row" style="margin-top: 10px;">
+				<div *ngFor="let image of coWorkersImgs; let i = index">
+					<div class="col-lg-6">
+						<img class="sponsor-img side-lg-screen" src="{{image}}" alt="Card image cap">
+					</div>
+				</div>
 			</div>
 		</div> 
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 main-container box-shadow marginsLR">
@@ -26,55 +33,62 @@
 		<!-- MENU PC -->
 		<div class="d-none d-sm-block col-sm-2 col-md-2 col-lg-2 side-container box-shadow">
 			<div style="margin: 10px 0 10px">
-				<button class="btn btn-block btn-success" routerLink="/vote" routerLinkActive="active">
-					<span class="fas fa-person-booth" style="color: white"></span>
-					Rösta
-				</button>
-				<button class="btn btn-block btn-danger" routerLink="/activity" routerLinkActive="active">
-					<span class="fas fa-exclamation gold-gradient" style="color: gold"></span>
-					Aktivitet
-				</button>
-				<button class="btn btn-block btn-danger" routerLink="/scoreboard" routerLinkActive="active">
-					<span class="fas fa-trophy gold-gradient" style="color: gold"></span>
-					Nollekampen
-				</button>
-				<button class="btn btn-block btn-dark" routerLink="/home" routerLinkActive="active">
-					<span class="fas fa-home"></span>
-					Hem
-				</button>
-				<button class="btn btn-block btn-dark" routerLink="/new-student" routerLinkActive="active">
-					<span class="fas fa-users"></span>
-					Brev Till Nollan!
-				</button>
-				<button class="btn btn-block btn-dark" routerLink="/new-student" routerLinkActive="active">
-					<span class="fas fa-users"></span>
-					Ditt Nolle-P
-				</button>
-				<button class="btn btn-block btn-dark">
-					<span class="fas fa-gamepad"></span>
-					Spel
-				</button>
-				<!--
-				<a class="button-styling colorVote" routerLink="/vote" routerLinkActive="active">
-					<span>Rösta</span>
-				</a>
-				<a class="button-styling colorActivity" routerLink="/activity" routerLinkActive="active">
-					<span>Aktivitet</span>
-				</a>
-				<a class="button-styling colorNollekampen" routerLink="/scoreboard" routerLinkActive="active">
-					<span>Nollekampen</span>
-				</a>
-				<a class="button-styling colorHome" routerLink="/home" routerLinkActive="active">
-					<span>Hem</span>
-				</a>
-				<a class="button-styling colorYourNollep" routerLink="/new-student" routerLinkActive="active">
-					<span>Ditt Nolle-P</span>
-				</a>
-				<a class="button-styling colorGame">
-					<span>Spel</span>
-				</a>
-			</div>
-				-->
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" disabled="false">
+						<span class="fas fa-person-booth" style="color: #000"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger" routerLink="/vote" routerLinkActive="active">
+						Rösta
+					</button>
+				</div>
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" style="width: 44px;" disabled="false">
+						<span class="fas fa-exclamation gold-gradient" style="color: gold"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger" routerLink="/activity" routerLinkActive="active">
+						Aktivitet
+					</button>
+				</div>
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" disabled="false">
+							<span class="fas fa-trophy gold-gradient" style="color: gold"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger" routerLink="/scoreboard" routerLinkActive="active">
+						Nollekampen
+					</button>
+				</div>
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" disabled="false">
+						<span class="fas fa-home" style="color: #000"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger" routerLink="/home" routerLinkActive="active">
+						Hem
+					</button>
+				</div>
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" disabled="false">
+						<span class="fas fa-users" style="color: #000"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger">
+						Brev Till Nollan!
+					</button>
+				</div>
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" disabled="false">
+						<span class="fas fa-users" style="color: #000"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger" routerLink="/new-student" routerLinkActive="active">
+						Ditt Nolle-P
+					</button>
+				</div>
+				<div class="btn-group btn-block">
+					<button class="btn btn-danger" disabled="false">
+						<span class="fas fa-gamepad" style="color: #000"></span>
+					</button>
+					<button class="btn btn-block btn-outline-danger">
+						Spel
+					</button>
+				</div>
 			</div>
 		</div>
 		<!-- sideS ON CELLPHONE #3B5998 #125688 -->

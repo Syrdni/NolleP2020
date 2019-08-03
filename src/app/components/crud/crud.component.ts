@@ -14,7 +14,7 @@ export class CrudComponent implements OnInit {
     let pathSpons     = 'assets/sponsors/';
     let pathCoWorkers = 'assets/coworkers/';
 
-    this.sponsImgs     = [`${pathSpons}/abf.png`, `${pathSpons}/skebo.png`, `${pathSpons}/sammes.png`];
+    this.sponsImgs     = [`${pathSpons}/abf.png`, `${pathSpons}/sammes.png`, `${pathSpons}/skebo.png`];
     this.coWorkersImgs = [`${pathCoWorkers}/campus.png`, `${pathCoWorkers}/ltu.png`, `${pathCoWorkers}/tkl.png`, ];
 
     // console.log(this);

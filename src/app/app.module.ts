@@ -20,7 +20,7 @@ import { ActivityComponent }      from './components/activity/activity.component
 import { SocialMediasComponent }  from './components/crud/helpers/social-medias/social-medias.component';
 import { MobileMenuComponent }    from './components/crud/helpers/mobile-menu/mobile-menu.component';
 import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
-import { TitleComponent }         from './components/crud/helpers/title/title.component';
+// import { TitleComponent }         from './components/crud/helpers/title/title.component';
 
 
 // import {RoutesArray} from './../app.routes';
@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     SocialMediasComponent,
     MobileMenuComponent,
     ImageCarouselComponent,
-    TitleComponent
+    // TitleComponent
   ],
   imports: [
     NgbModule.forRoot(), // Bootstrap module
