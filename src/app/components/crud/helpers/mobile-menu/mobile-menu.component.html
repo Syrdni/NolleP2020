@@ -7,31 +7,37 @@
 <div id="mySidebar" class="sidebar" [ngStyle]="{'width.px': isExpanded ? 250 : 0}">
 	<a class="closebtn" (click)="isExpanded = !isExpanded">&times;</a>
 	<div style="margin: 10px 0 10px">
-		<button class="btn btn-block btn-success text-left" (click)="isExpanded = !isExpanded" routerLink="/vote" routerLinkActive="active">
-			<span class="fas fa-person-booth" style="color: white"></span>
+		<div class="btn-group btn-block">
+			<button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<button class="btn btn-block btn-outline-primary">Sony</button>
+		</div>
+		<button class="btn btn-block btn-outline-success" (click)="isExpanded = !isExpanded" routerLink="/vote" routerLinkActive="active">
+			<span class="fas fa-person-booth" style="color: white; text-align: left;"></span>
 			Rösta
 		</button>
-		<button class="btn btn-block btn-danger text-left" (click)="isExpanded = !isExpanded" routerLink="/activity" routerLinkActive="active">
-			<img class="img-glyph" src="/assets/questmark.png">
+		<button class="btn btn-block btn-outline-danger text-left" (click)="isExpanded = !isExpanded" routerLink="/activity" routerLinkActive="active">
+			<span class="fas fa-exclamation gold-gradient" style="color: gold"></span>
 			Aktivitet
 		</button>
-		<button class="btn btn-block btn-danger text-left" (click)="isExpanded = !isExpanded" routerLink="/scoreboard" routerLinkActive="active">
-			<img class="img-glyph" src="/assets/pokal.png">
+		<button class="btn btn-block btn-outline-danger text-left" (click)="isExpanded = !isExpanded" routerLink="/scoreboard" routerLinkActive="active">
+			<span class="fas fa-trophy gold-gradient" style="color: gold"></span>
 			Nollekampen
 		</button>
-		<button class="btn btn-block btn-dark text-left" (click)="isExpanded = !isExpanded" routerLink="/home" routerLinkActive="active">
+		<button class="btn btn-block btn-outline-dark text-left" (click)="isExpanded = !isExpanded" routerLink="/home" routerLinkActive="active">
 			<span class="fas fa-home"></span>
 			Hem
 		</button>
-		<button class="btn btn-block btn-dark text-left" routerLink="/new-student" routerLinkActive="active">
+		<button class="btn btn-block btn-outline-dark text-left" routerLink="/new-student" routerLinkActive="active">
 			<span class="fas fa-users"></span>
 			Brev Till Nollan!
 		</button>
-		<button class="btn btn-block btn-dark text-left" (click)="isExpanded = !isExpanded" routerLink="/new-student" routerLinkActive="active">
+		<button class="btn btn-block btn-outline-dark text-left" (click)="isExpanded = !isExpanded" routerLink="/new-student" routerLinkActive="active">
 			<span class="fas fa-users"></span>
 			Ditt Nolle-P
 		</button>
-		<button class="btn btn-block btn-dark text-left">
+		<button class="btn btn-block btn-outline-dark text-left">
 			<span class="fas fa-gamepad"></span>
 			Spel
 		</button>
