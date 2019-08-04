@@ -20,6 +20,7 @@ import { ActivityComponent }      from './components/activity/activity.component
 import { SocialMediasComponent }  from './components/crud/helpers/social-medias/social-medias.component';
 import { MobileMenuComponent }    from './components/crud/helpers/mobile-menu/mobile-menu.component';
 import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
+import { LetterToNollanComponent } from './components/letter-to-nollan/letter-to-nollan.component';
 // import { TitleComponent }         from './components/crud/helpers/title/title.component';
 
 
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
   { path: 'vote',        component: VoteComponent },
   { path: 'scoreboard',  component: ScoreboardComponent },
   { path: 'activity',    component: ActivityComponent },
+  { path: 'letter-to-nollan',    component: LetterToNollanComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: AppComponent }
 ];
@@ -50,6 +52,7 @@ const appRoutes: Routes = [
     SocialMediasComponent,
     MobileMenuComponent,
     ImageCarouselComponent,
+    LetterToNollanComponent,
     // TitleComponent
   ],
   imports: [

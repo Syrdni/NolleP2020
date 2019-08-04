@@ -30,13 +30,23 @@ export class AppComponent {
 	genUUID() {
 		this.http.get('/assets/event.json')
     	.subscribe((res: any) => {
-			let date = res[0].date;
-			let event = res[0].event;
+			let arr = res;
+			let event = arr[0].event;
 			let found = Object.keys(this.cookieService.getAll()).find(e => e === event);
 
 			if(found) {
 				return;
 			}
+
+			let today = moment(new Date());
+			arr = res.filter(e => moment(e.date).isAfter(today));
+			
+			if(!arr.length) {
+				return
+			}
+
+			event    = arr[0].event;
+			let date = arr[0].date;
 			
 			date = moment(date)
 						.add(1, 'day')

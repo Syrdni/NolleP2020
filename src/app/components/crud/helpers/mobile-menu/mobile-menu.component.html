@@ -5,10 +5,20 @@
 </div>
 
 <div id="mySidebar" class="sidebar" [ngStyle]="{'width.px': isExpanded ? 250 : 0}">
-	<a class="closebtn" (click)="isExpanded = !isExpanded">&times;</a>
+	<div class="row">
+		<div class="col-2">
+			<img src="assets/faviconTrans.ico" (click)="isExpanded = !isExpanded" data-toggle="modal" data-target="#modal" style="height: 5vh; width: auto; margin-top: 3px;">
+		</div>
+		<div class="col-7">
+			<p class="menu-title-text">Phöseriet</p>
+		</div>
+		<div class="col-2">
+			<a class="fas fa-times closebtn" style="color: #ff1a68;" (click)="isExpanded = !isExpanded"></a>
+		</div>
+	</div>
 	<div style="margin: 10px 0 10px">
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" disabled="false">
+			<button class="btn btn-danger" disabled>
 				<span class="fas fa-person-booth" style="color: #000"></span>
 			</button>
 			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/vote" routerLinkActive="active">
@@ -16,7 +26,7 @@
 			</button>
 		</div>
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" style="width: 44px;" disabled="false">
+			<button class="btn btn-danger" style="width: 48px;" disabled>
 				<span class="fas fa-exclamation gold-gradient" style="color: gold"></span>
 			</button>
 			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/activity" routerLinkActive="active">
@@ -24,7 +34,7 @@
 			</button>
 		</div>
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" disabled="false">
+			<button class="btn btn-danger" disabled>
 					<span class="fas fa-trophy gold-gradient" style="color: gold"></span>
 			</button>
 			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/scoreboard" routerLinkActive="active">
@@ -32,7 +42,7 @@
 			</button>
 		</div>
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" disabled="false">
+			<button class="btn btn-danger" disabled>
 				<span class="fas fa-home" style="color: #000"></span>
 			</button>
 			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/home" routerLinkActive="active">
@@ -40,15 +50,15 @@
 			</button>
 		</div>
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" disabled="false">
-				<span class="fas fa-users" style="color: #000"></span>
+			<button class="btn btn-danger" disabled>
+				<span>💌</span>
 			</button>
-			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded">
+			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/letter-to-nollan" routerLinkActive="active">
 				Brev Till Nollan!
 			</button>
 		</div>
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" disabled="false">
+			<button class="btn btn-danger" disabled>
 				<span class="fas fa-users" style="color: #000"></span>
 			</button>
 			<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/new-student" routerLinkActive="active">
@@ -56,8 +66,8 @@
 			</button>
 		</div>
 		<div class="btn-group btn-block">
-			<button class="btn btn-danger" (click)="isExpanded = !isExpanded" disabled="false">
-				<span class="fas fa-gamepad" style="color: #000"></span>
+			<button class="btn btn-danger" (click)="isExpanded = !isExpanded" disabled>
+				<span>🐼</span>
 			</button>
 			<button class="btn btn-block btn-outline-danger">
 				Spel
