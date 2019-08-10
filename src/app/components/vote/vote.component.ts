@@ -14,20 +14,25 @@ export class VoteComponent implements OnInit {
 	options: Array<string>;
 	url: string;
 	event: string;
+	show: boolean;
 
 	constructor(public http: HttpClient, private apiService: ApiService, private cookieService: CookieService) { 
 		this.options = [];
+		this.show = false;
 	}
 
 	ngOnInit() {
 		this.http.get('/assets/event.json')
     	.subscribe((res: any) => {
-			let arr = [];
 			let today = moment(new Date());
-
+			let arr = [];
+			
 			arr = res.filter(e => moment(e.date).isAfter(today));
+			this.show = arr.length > 0 ? moment(today).isAfter(res[0].date) : false;
 
-			this.event = arr[0].event;
+			if(arr.length) {
+				this.event = arr[0].event;
+			}
 		});
 
 		this.apiService.read().subscribe((res: any[])=> {

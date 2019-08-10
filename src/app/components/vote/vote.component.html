@@ -1,20 +1,30 @@
 <crud>
 	<div text>
-		<h1>{{ event }}</h1>
-		<h5>Vad tyckte du om dagens aktivitet? 🐼</h5>
-		<div class="row">
-			<div class="d-none d-sm-block col-sm-12 col-md-12 col-lg-12 vote-content-center" >
-				<i class="fas fa-laugh" 	 (click)="vote(0)" ></i>
-				<i class="fas fa-grin"  	 (click)="vote(1)" ></i>
-				<i class="fas fa-frown-open" (click)="vote(2)" ></i>
-				<i class="fas fa-frown" 	 (click)="vote(3)" ></i>
+		<div *ngIf="!show">
+			<div class="col-6 col-lg-3 title-arrow">
+				<h1>Rösta</h1>
 			</div>
+			<br>
+			<h5>Här inne kan du rösta på dagens aktivitet, däremot för tillfället har inga aktiviteter inträffat 🐼</h5>
+			<img class="img" src="assets/faviconTrans.ico">
 		</div>
+		<div *ngIf="show">
+			<h1>{{ event }}</h1>
+			<h5>Vad tyckte du om dagens aktivitet? 🐼</h5>
+			<div class="row">
+				<div class="d-none d-sm-block col-sm-12 col-md-12 col-lg-12 vote-content-center" >
+					<i class="fas fa-laugh" 	 (click)="vote(0)" ></i>
+					<i class="fas fa-grin"  	 (click)="vote(1)" ></i>
+					<i class="fas fa-frown-open" (click)="vote(2)" ></i>
+					<i class="fas fa-frown" 	 (click)="vote(3)" ></i>
+				</div>
+			</div>
 			<div class="d-block d-sm-none col-12 vote-content-center" >
 				<i class="fas fa-laugh col-12" 	    (click)="vote(0)" ></i>
 				<i class="fas fa-grin col-12"  	    (click)="vote(1)" ></i>
 				<i class="fas fa-frown-open col-12" (click)="vote(2)" ></i>
 				<i class="fas fa-frown col-12" 	    (click)="vote(3)" ></i>
 			</div>
+		</div>
 	</div>
 </crud>

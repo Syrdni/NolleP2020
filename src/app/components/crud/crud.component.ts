@@ -22,9 +22,13 @@ export class CrudComponent implements OnInit {
         let pathCoWorkers = 'assets/coworkers/';
 
         this.sponsImgs     = [`${pathSpons}/abf.png`, `${pathSpons}/sammes.png`, `${pathSpons}/skebo.png`];
-        this.coWorkersImgs = [`${pathCoWorkers}/campus.png`, `${pathCoWorkers}/ltu.png`, `${pathCoWorkers}/tkl.png`, ];
+        this.coWorkersImgs = [`${pathCoWorkers}/campus.png`, `${pathCoWorkers}/ltu.png`, `${pathCoWorkers}/tkl.png`];
         this.cph = [
-            {name: 'Google\'s', type: 'Discord',    link: ''},
+            {name: 'Google\'s', 
+            xXx: [{
+                    type: 'Discord', link: ''
+                }
+            ]},
             {name: 'Salt\'s',   
             xXx: [{
                     type: 'Snapchat',  
@@ -35,8 +39,16 @@ export class CrudComponent implements OnInit {
                     link: ''
                 }
             ]},
-            {name: 'Brawni\'s', type: 'Podcast',    link: 'https://tinyurl.com/yy42y79y'},
-            {name: 'Roboto\'s', type: 'Musiklista', link: ''}
+            {name: 'Brawni\'s', 
+            xXx: [{
+                    type: 'Podcast',    link: 'https://tinyurl.com/yy42y79y'
+                }
+            ]},
+            {name: 'Roboto\'s', 
+            xXx: [{
+                    type: 'Musiklista', link: ''
+                }
+            ]}
         ];
 
         // console.log(this);
@@ -96,9 +108,5 @@ export class CrudComponent implements OnInit {
         }
 
         this.prevDir = dir;
-    }
-
-    log() {
-        console.log("Dood!!")
     }
 }

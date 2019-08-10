@@ -1,12 +1,10 @@
 @fontSizePc: 20px;
-@backgroundPcHeight: 45px;
-@backgroundPcWidth:  35px;
-@transformPc:        translate(-50%, 176%);
+@backgroundPcHeight: 55px;
+@backgroundPcWidth:  45px;
 
 @fontSizeMobile: 35px;
 @backgroundMobileHeight: 55px;
 @backgroundMobileWidth:  45px;
-@transformMobile:        translate(-115%, 235%);
 
 h1 {
     color: white;
@@ -34,8 +32,7 @@ hr {
     position: relative;
     float: left;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 
     @media screen and (max-width: 600px) {
         font-size: @fontSizeMobile;
@@ -55,8 +52,8 @@ hr {
 	width: @backgroundPcWidth;
     height: @backgroundPcHeight;
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
-    z-index:10;
-    transform-origin:bottom center;
+    z-index: 10;
+    transform-origin: bottom center;
 
     @media screen and (max-width: 600px) {
         height: @backgroundMobileHeight;
@@ -75,42 +72,35 @@ hr {
 
 .social-background.facebook:before {
     content:"▲";
-    font-size: 12px;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    font-size: 16px;
     color: #007bff;
-    display: inline-block;
-    text-align: center;
-    transform: @transformPc;
-
-    @media screen and (max-width: 600px) {
-        transform: @transformMobile;
-    }
 }
 
 .social-background.instagram:before {
     content:"▲";
-    font-size: 12px;
-    // background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    font-size: 16px;
     color: #fdf497;
-    display: inline-block;
-    text-align: center;
-    transform: @transformPc;
-
-    @media screen and (max-width: 600px) {
-        transform: @transformMobile;
-    }
 }
 
 .social-background.discord:before {
     content:"▲";
-    font-size: 12px;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    font-size: 16px;
     color: #4a67cf;
-    display: inline-block;
-    text-align: center;
-    transform: @transformPc;
-
-    @media screen and (max-width: 600px) {
-        transform: @transformMobile;
-    }
 }
 
 .social-background.facebook {

@@ -21,6 +21,7 @@ import { SocialMediasComponent }  from './components/crud/helpers/social-medias/
 import { MobileMenuComponent }    from './components/crud/helpers/mobile-menu/mobile-menu.component';
 import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
 import { LetterToNollanComponent } from './components/letter-to-nollan/letter-to-nollan.component';
+import { MemoryComponent } from './components/games/memory/memory.component';
 // import { TitleComponent }         from './components/crud/helpers/title/title.component';
 
 
@@ -30,14 +31,15 @@ import { LetterToNollanComponent } from './components/letter-to-nollan/letter-to
  * ROUTES
  */
 const appRoutes: Routes = [
-  { path: 'home',        component: HomeComponent },
-  { path: 'new-student', component: NewStudentComponent },
-  { path: 'vote',        component: VoteComponent },
-  { path: 'scoreboard',  component: ScoreboardComponent },
-  { path: 'activity',    component: ActivityComponent },
-  { path: 'letter-to-nollan',    component: LetterToNollanComponent },
+  { path: 'home',             component: HomeComponent },
+  { path: 'new-student',      component: NewStudentComponent },
+  { path: 'vote',             component: VoteComponent },
+  { path: 'scoreboard',       component: ScoreboardComponent },
+  { path: 'activity',         component: ActivityComponent },
+  { path: 'letter-to-nollan', component: LetterToNollanComponent },
+  { path: 'memory',           component: MemoryComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: AppComponent }
+  { path: '**',               component: AppComponent }
 ];
 
 @NgModule({
@@ -53,6 +55,7 @@ const appRoutes: Routes = [
     MobileMenuComponent,
     ImageCarouselComponent,
     LetterToNollanComponent,
+    MemoryComponent,
     // TitleComponent
   ],
   imports: [

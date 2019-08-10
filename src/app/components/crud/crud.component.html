@@ -94,7 +94,7 @@
 					<button class="btn btn-danger" disabled>
 						<span>🐼</span>
 					</button>
-					<button class="btn btn-block btn-outline-danger">
+					<button class="btn btn-block btn-outline-danger" routerLink="/memory" routerLinkActive="active">
 						Spel
 					</button>
 				</div>
@@ -121,19 +121,10 @@
 
 
 <!-- The Modal -->
-<!-- Modal -->
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
-			<!-- <div class="modal-header shadow">
-				<a class="fas fa-times close float-right" data-dismiss="modal" style="color: #ff1a68;" aria-hidden="true"></a>
-				<div class="row">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-					</div>
-				</div>
-			</div> -->
 			<div class="modal-body shadow">
-				<!-- <a class="fas fa-times close float-right" data-dismiss="modal" style="color: #ff1a68;" aria-hidden="true"></a> -->
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="cph-card">
@@ -151,13 +142,16 @@
 										</div>
 									</div>
 								</div>
-								<a href="{{cph[0].link}}" target="_blank">
-									<div class="title">
-										<h3>Överphösare</h3>
-										<h1>{{cph[0].name}}</h1>
-										<h2>{{cph[0].type}}</h2>
+								<div class="title">
+									<h3>Överphösare</h3>
+									<h1>{{cph[0].name}}</h1>
+									<h2>{{cph[0].type}}</h2>
+									<div *ngFor="let x of cph[0].xXx">
+										<a href="{{x.link}}" target="_blank">
+											<h2>{{x.type}}</h2>
+										</a>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="right">
 								<span></span>
@@ -177,12 +171,11 @@
 									<h3>Överphösare</h3>
 									<h1>{{cph[1].name}}</h1>
 									<h2>{{cph[1].type}}</h2>
-									<a href="{{cph[1].xXx[0].link}}" target="_blank">
-										<h2>{{cph[1].xXx[0].type}}</h2>
-									</a>
-									<a href="{{cph[1].xXx[1].link}}" target="_blank">
-										<h2>{{cph[1].xXx[1].type}}</h2>
-									</a>
+									<div *ngFor="let x of cph[1].xXx">
+										<a href="{{x.link}}" target="_blank">
+											<h2>{{x.type}}</h2>
+										</a>
+									</div>
 								</div>
 							</div>
 							<div class="back">
@@ -199,13 +192,16 @@
 										</div>
 									</div>
 								</div>
-								<a href="{{cph[2].link}}" target="_blank">
-									<div class="title">
-										<h3>Överphösare</h3>
-										<h1>{{cph[2].name}}</h1>
-										<h2>{{cph[2].type}}</h2>
+								<div class="title">
+									<h3>Överphösare</h3>
+									<h1>{{cph[2].name}}</h1>
+									<h2>{{cph[2].type}}</h2>
+									<div *ngFor="let x of cph[2].xXx">
+										<a href="{{x.link}}" target="_blank">
+											<h2>{{x.type}}</h2>
+										</a>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="left">
 								<span></span>
@@ -221,21 +217,21 @@
 										</div>
 									</div>
 								</div>
-								<a href="{{cph[3].link}}" target="_blank">
-									<div class="title">
-										<h3>Överphösare</h3>
-										<h1>{{cph[3].name}}</h1>
-										<h2>{{cph[3].type}}</h2>
+								<div class="title">
+									<h3>Överphösare</h3>
+									<h1>{{cph[3].name}}</h1>
+									<h2>{{cph[3].type}}</h2>
+									<div *ngFor="let x of cph[3].xXx">
+										<a href="{{x.link}}" target="_blank">
+											<h2>{{x.type}}</h2>
+										</a>
 									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			</div> -->
 		</div>
 	</div>
 </div>

@@ -1,10 +1,19 @@
 <crud>
 	<div text>
-		<div *ngIf="!showScore">
-			<div *ngFor="let item of scores; let i = index" class="col-md-12 col-lg-12" style="text-align: center">
-				<p>{{item.score}}</p>
+	<div class="col-lg-5 title-arrow">
+		<h1>Nollekampen</h1>
+	</div>
+	<div class="box col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngIf="!showScore">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<div *ngFor="let item of scores; let i = index">
+			<div class="ophText" (click)="flavorTextToShow()" *ngIf="item.isVisible">
+				<h4>{{item.score}}</h4>
 			</div>
 		</div>
+	</div>
 		<div *ngIf="showScore">
 			<img class="class-img col-xs-12 col-sm-12 col-md-12 col-lg-12" src="{{classImg}}" alt="">
 			<div class="container-fluid">
