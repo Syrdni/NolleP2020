@@ -18,6 +18,8 @@ a {
 		visibility: hidden;
 	}
 
+	cursor: pointer;
+
 	border-radius: 80%;
 	width: 45px;
 	height: 55px;
@@ -37,6 +39,10 @@ a {
 		display: inline-block;
 		text-align: center;
 		transform: translate(-25%, 160%);
+	}
+
+	&:active {
+		filter: brightness(50%);
 	}
 }
 
@@ -68,6 +74,10 @@ a {
 
 		&:hover {
 			cursor: pointer;
+		}
+
+		&:active {
+			filter: brightness(50%);
 		}
 	}
 

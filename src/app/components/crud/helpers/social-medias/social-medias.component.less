@@ -1,4 +1,4 @@
-@fontSizePc: 20px;
+@fontSizePc: 30px;
 @backgroundPcHeight: 55px;
 @backgroundPcWidth:  45px;
 
@@ -26,28 +26,12 @@ hr {
     background-color: white;
 }
 
-.fab {
-    color: white;
-    font-size: @fontSizePc;
-    position: relative;
-    float: left;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @media screen and (max-width: 600px) {
-        font-size: @fontSizeMobile;
-    }
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
 .fa-discord {
     color: white;
 }
 
 .social-background {
+    position: relative;
     border-radius: 80%;
 	width: @backgroundPcWidth;
     height: @backgroundPcHeight;
@@ -68,51 +52,59 @@ hr {
         opacity: 0.5;
         cursor: pointer;
     }
-}
 
-.social-background.facebook:before {
-    content:"▲";
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 70%);
-    font-size: 16px;
-    color: #007bff;
-}
+    .fab {
+        color: white;
+        font-size: @fontSizePc;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        @media screen and (max-width: 600px) {
+            font-size: @fontSizeMobile;
+        }
+    
+        &:hover {
+            text-decoration: none;
+        }
+    }
 
-.social-background.instagram:before {
-    content:"▲";
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 70%);
-    font-size: 16px;
-    color: #fdf497;
-}
-
-.social-background.discord:before {
-    content:"▲";
-    position: relative;
-    float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 70%);
-    font-size: 16px;
-    color: #4a67cf;
+    &:before {
+        content:"▲";
+        color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+    }
+    
 }
 
 .social-background.facebook {
     background: #007bff;
 }
 
+.social-background.facebook:before {
+    color: #007bff;
+}
+
 .social-background.instagram {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
+.social-background.instagram:before {
+    z-index: -1;
+    color: #fdf497;
+}
+
 .social-background.discord {
     background: #4a67cf;
+}
+
+.social-background.discord:before {
+    color: #4a67cf;
 }
 
 .arrow {
@@ -125,11 +117,7 @@ hr {
     > p {
         position: absolute;
         left: 0;
-        top: 0;
-        
-        transform: translate(-15px, -25px);
-        @media screen and (max-width: 600px) {
-            transform: translate(-15px, -24px);
-        }
+        top: 100%;
+        transform: translate(0, -100%);
     }
 }

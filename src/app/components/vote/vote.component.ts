@@ -14,10 +14,12 @@ export class VoteComponent implements OnInit {
 	options: Array<string>;
 	url: string;
 	event: string;
+	doneLoading: boolean;
 	show: boolean;
 
 	constructor(public http: HttpClient, private apiService: ApiService, private cookieService: CookieService) { 
 		this.options = [];
+		this.doneLoading = false;
 		this.show = false;
 	}
 
@@ -33,6 +35,8 @@ export class VoteComponent implements OnInit {
 			if(arr.length) {
 				this.event = arr[0].event;
 			}
+
+			this.doneLoading = true;
 		});
 
 		this.apiService.read().subscribe((res: any[])=> {
