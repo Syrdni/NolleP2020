@@ -32,11 +32,11 @@ export class CrudComponent implements OnInit {
             {name: 'Salt\'s',   
             xXx: [{
                     type: 'Snapchat',  
-                    link: '' 
+                    link: 'https://www.snapchat.com/add/oph-salt' 
                 },
                 {
                     type: 'Youtube',  
-                    link: ''
+                    link: 'https://tinyurl.com/y57e9vvo'
                 }
             ]},
             {name: 'Brawni\'s', 

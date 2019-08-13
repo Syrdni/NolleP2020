@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-activity',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityComponent implements OnInit {
 
-  constructor() { }
+	img: string;
 
-  ngOnInit() {
-  }
+	constructor() {
+	}
+
+	ngOnInit() {
+		this.loadImage()
+	}
+
+	loadImage() {
+		let date = moment(new Date()).format('YYYYMMDD');
+		this.img = `assets/activity/${date}.png`;
+	}
 
 }

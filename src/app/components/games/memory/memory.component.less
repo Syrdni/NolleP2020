@@ -2,7 +2,7 @@ h1 {
     color: #fff;
 }
 
-h4 {
+h2 {
     color: #fff;
 }
 
@@ -10,28 +10,88 @@ h5 {
     color: #fff;
 }
 
-p {
-    color: #fff;
-}
-
-ul > li {
-    color: #fff;
-}
-u {
-    text-decoration: underline #ff1a68 !important;
-}
-
-.box {
+.score {
+    font-size: 30vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    overflow: hidden;
+    opacity: 0;
+    text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
+}
 
-    &:hover {
-        cursor: pointer;
-        background: rgba(255, 56, 85, 0.5);
+.imgTmp {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vh!important;
+}
+
+.imgMemoryCards {
+    height: 20vh;
+    min-width: 35vh;
+}
+
+.grid1x3 {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.border {
+    position: relative;
+    margin: 10px;
+    border: 0px!important;
+}
+
+.box {
+    &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        right: -2px;
+        left: -2px;
+        transform: skew(2deg, 2deg);
+        z-index: -1;
+    
+        background: linear-gradient(315deg, #ff0057, #B3003D);
+    }
+}
+
+.victoryScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+    width: 50%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.75), 0 8px 22px 0 rgba(0, 0, 0, 0.75);
+
+    /// MOBILE
+    @media screen and (max-width: 600px){
+        width: 90%;
+    }
+    height: 300px;
+    overflow: hidden;
+    z-index: 1;
+
+    .content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        > h1, > h2 {
+            text-align: center;
+        }
     }
 
     span:nth-child(1) {
@@ -39,7 +99,7 @@ u {
         top: 0;
         left: 0;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background: linear-gradient(to right, transparent, #ff1a68);
         animation: leftToRight 2s linear infinite;
     }
@@ -48,7 +108,7 @@ u {
         position: absolute;
         top: 0;
         right: 0;
-        width: 2px;
+        width: 3px;
         height: 100%;
         animation: upToDown 2s linear infinite;
         animation-delay: 1s;
@@ -59,7 +119,7 @@ u {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background: linear-gradient(to left, transparent, #ff1a68);
         animation: rightToLeft 2s linear infinite;
     }
@@ -68,88 +128,27 @@ u {
         position: absolute;
         top: 0;
         left: 0;
-        width: 2px;
+        width: 3px;
         height: 100%;
         animation: downToUp 2s linear infinite;
         animation-delay: 1s;
     }
 }
 
-.ophText {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    text-align: center;
-}
-.coin p{
-    font-family: georgia;
-    font-style: italic;
-    position: absolute;
-    font-size: 28px;
-    z-index: 700;
-    top: -19px;
-    left: 19px;
-}
-  
-.coin.bronze p{  color: rgba(223,182,103,1);}
-.coin.silver p{  color: rgba(160,160,160,1);}
-.coin.gold   p{  color: rgba(242,215,50,1);}
-  
-.coin{
-    cursor: pointer;
-    content: "";
-    width: 90px; 
-    height: 90px;
-    display: inline-block;
-    position: relative;
-    margin: 5px;
-    top: 6px;
-    border-radius: 50px;
-    z-index: 500;
-    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
+.appear {
+    animation: appear .8s linear both;
 }
 
-.bronze{
-	width: 42px; 
-    height: 42px;
-    background: linear-gradient(45deg, rgba(193, 126, 48, 1) 50%,  rgba(215, 140, 54, 1) 50%);
-}
-  
-.silver{
-	width: 60px; 
-    height: 60px;
-    background: linear-gradient(45deg, rgba(169, 169, 169, 1) 50%, rgba(192, 192, 192, 1) 50%);
-}
-  
-.gold{
-    background: linear-gradient(45deg, rgba(227, 160, 53, 1) 50%, rgba(253, 178, 59, 1) 50%);
-}
-
-.gold-img {
-    height: 160px;
-    width: auto;
-}
-
-.silver-img {
-    height: 130px;
-    width: auto;
-}
-
-.bronze-img {
-    height: 112px;
-    width: auto;
-}
-
-.class-img {
-    position: absolute;
-    transform: translateX(-50%) translateY(-50%);
-    left: 50%;
-    top: 50%;
-    width: 50vh;
-    z-index: -1;
-    opacity: 0.3;
+@keyframes appear {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
 }
 
 @keyframes leftToRight {
