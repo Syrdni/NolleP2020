@@ -1,11 +1,12 @@
 <crud>
 	<div text>
+		<div class="col-lg-8 title-arrow">
+			<h1>Phösar Memory</h1>
+		</div>
+		<br>
+		<br>
 		<div *ngIf="!show">
-			<div class="col-lg-8 title-arrow">
-				<h1>Rösta</h1>
-			</div>
-			<br>
-			<h5>Under konstruktion återkom senare under Nollep 🐼</h5>
+			<h5>Under konstruktion återkom senare under Nollep <span style="color:#ff1adb">#</span>🐼</h5>
 			<img class="imgTmp" src="assets/faviconTrans.ico">
 		</div>
 		<div *ngIf="show">
@@ -25,11 +26,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8 title-arrow">
-				<h1>Phösar Memory</h1>
-			</div>
-			<br>
-			<br>
 			<div *ngIf="loaded">
 				<h2 class="score">{{correct}}</h2>
 				<div class="row justify-content-center">

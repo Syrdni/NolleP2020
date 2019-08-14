@@ -20,7 +20,7 @@ export class AppComponent {
 		this.title = 'Nolleperioden';
 		this.year  = globals.year;
 
-		this.ts.setTitle(`Nolle-p ${this.year}`);
+		this.ts.setTitle(`Nollep ${this.year}`);
 	}
 
 	ngOnInit() {

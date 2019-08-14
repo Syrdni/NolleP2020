@@ -1,98 +1,11 @@
 @brace-color: #fff;
 
-// @media screen and (min-width: 600px) {
-// 	.hide-mobile-menu {
-// 		visibility: hidden;
-// 	}
-
-// 	.navbar-nav > li {
-// 		display: inline-block;
-// 		float: none;
-// 		transform: translateY(127%);
-// 		background-color: #c1272d;
-// 		border-bottom: 3px solid white;
-// 		box-sizing:border-box
-// 	}
-
-// 	.arrow {
-// 		z-index: -1;
-// 		position: absolute;
-// 		width: 0;
-// 		height: 0;
-// 		border-left: 30px solid transparent;
-// 		border-right: 30px solid transparent;
-
-// 		border-bottom: 30px solid #c1272d;
-// 	}
-
-// 	.arrow-left {
-// 		transform: translateX(-80%) translateY(-122%) rotate(45deg);
-// 	}
-
-// 	.arrow-right {
-// 		transform: translateX(174%) translateY(-122%) rotate(-45deg);
-// 	}
-
-// 	.line {
-// 		width: 60px;
-// 		height: 3px;
-// 		background-color: white;
-// 		position: absolute;
-// 		border-bottom: 3px solid white;
-// 		z-index: 1;
-// 	}
-
-// 	.lineLeft {
-// 		transform: translateX(-97%) translateY(-447%) rotate(45deg);
-// 	}
-
-// 	.lineRight {
-// 		transform: translateX(191%) translateY(-450%) rotate(-45deg);
-// 	}
-// }
-
-// .mobile-style {
-// 	margin-top: 10px;
-// 	border-left: 3px solid black;
-// 	border-right: 3px solid black;
-// 	border-top: 3px solid black;
-// 	transform: translateY(4%);
-// }
-
-// .navbar-nav > li {
-// 	background-color: #c1272d;
-// }
-
-// .navbar {
-// 	border-bottom: 3px solid white;
-// 	background-color: #041a8d !important;
-// }
-
-// .navbar-brand {
-// 	transform: translateX(-50%);
-// 	left: 50%;
-// 	position: absolute;
-// }
-
-// .navbar-nav {
-// 	float: none;
-// 	margin: 0 auto;
-// 	display: block;
-// 	text-align: center;
-// }
-
 .menu-mobile > a {
 	float: none;
 	background-color: #343a40;
 }
 
 /* Font Setup*/
-
-// .font header {
-// 	transform: translateX(-50%) translateY(-40%);
-// 	left: 50%;
-// 	position: absolute;
-// }
 
 .main-title {
     color: #fff;
@@ -103,17 +16,26 @@
 	height: 100px;
 	margin-top: 5px;
 	text-decoration: overline underline  #ff1a68;
+	@media screen and (max-width: 600px) {
+		font-size: 3.0rem;
+	}
 }
 
 .year-title {
+	position: absolute;
+    left: 52%;
+    top: 75%;
+	transform: translate(-50%, -50%);
+
 	color: #fff;
 	font-size: 2.6rem;
 	text-align: center;
 	font-family: Georgia;
-	height: 60px;
-	margin: -57px 0 0 66px;
+	
 	@media screen and (max-width: 600px) {
-		margin: -50px 0 0 50px;
+		left: 55%;
+		top: 70%;
+		font-size: 1.9rem;
 	}
 }
 

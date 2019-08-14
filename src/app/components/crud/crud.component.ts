@@ -26,7 +26,7 @@ export class CrudComponent implements OnInit {
         this.cph = [
             {name: 'Google\'s', 
             xXx: [{
-                    type: 'Discord', link: ''
+                    type: 'Discord', link: 'https://discord.gg/K6ByRSk'
                 }
             ]},
             {name: 'Salt\'s',   
@@ -35,7 +35,7 @@ export class CrudComponent implements OnInit {
                     link: 'https://www.snapchat.com/add/oph-salt' 
                 },
                 {
-                    type: 'Youtube',  
+                    type: 'Youtube',
                     link: 'https://tinyurl.com/y57e9vvo'
                 }
             ]},
@@ -46,14 +46,12 @@ export class CrudComponent implements OnInit {
             ]},
             {name: 'Roboto\'s', 
             xXx: [{
-                    type: 'Musiklista', link: ''
+                    type: 'Musiklista', link: 'https://tinyurl.com/y25xkwty'
                 }
             ]}
         ];
-
-        // console.log(this);
     }
-
+    
     ngOnInit() {
     }
 

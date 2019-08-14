@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as moment from 'moment';
 
 @Component({
@@ -9,17 +10,23 @@ import * as moment from 'moment';
 export class ActivityComponent implements OnInit {
 
 	img: string;
+	show: boolean = false;
+	date: string;
 
-	constructor() {
-	}
+	constructor(public http: HttpClient) {
 
-	ngOnInit() {
-		this.loadImage()
-	}
+		this.http.get('/assets/event.json')
+    	.subscribe((res: any) => {
+			let today = moment(new Date());
+			
+			this.show = moment(today).isAfter(res[0].date);
+			this.date = res[0].date;
+		});
 
-	loadImage() {
 		let date = moment(new Date()).format('YYYYMMDD');
 		this.img = `assets/activity/${date}.png`;
 	}
+
+	ngOnInit() { }
 
 }

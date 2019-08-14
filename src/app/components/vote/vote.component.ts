@@ -39,9 +39,9 @@ export class VoteComponent implements OnInit {
 			this.doneLoading = true;
 		});
 
-		this.apiService.read().subscribe((res: any[])=> {
-			console.log(res);
-		}, (e: any) => console.log("Error " + e));
+		// this.apiService.read().subscribe((res: any[])=> {
+		// 	console.log(res);
+		// }, (e: any) => console.log("Error " + e));
 	}
 	
 	vote(vote: any) {
