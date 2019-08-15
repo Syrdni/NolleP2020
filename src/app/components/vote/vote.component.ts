@@ -29,7 +29,12 @@ export class VoteComponent implements OnInit {
 			let today = moment(new Date());
 			let arr = [];
 			
-			arr = res.filter(e => moment(e.date).isAfter(today));
+			arr = res.filter(e => moment(e.date)
+									.add(1, 'day')
+									.subtract(5, 'minutes')
+									.isAfter(today));
+									
+			/// Show variable to see if Nollep has started
 			this.show = arr.length > 0 ? moment(today).isAfter(res[0].date) : false;
 
 			if(arr.length) {

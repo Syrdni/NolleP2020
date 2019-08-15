@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import * as $ from 'jquery';
+import * as moment from 'moment';
 
 interface Card{
 	phosare: string
@@ -24,6 +25,7 @@ export class MemoryComponent implements OnInit {
 	ended:  boolean;
 	victoryText: string;
 	show: boolean;
+	startTimestamp: string;
 
 	constructor(private http: Http) {
 		this.loaded = false;
@@ -43,7 +45,8 @@ export class MemoryComponent implements OnInit {
 
 			this.cards = res.json();
 			this.show = true;
-			this.chooseCard();
+			// this.chooseCard();
+			this.start();
 			this.loaded = true;
 		});
 	}
@@ -56,7 +59,8 @@ export class MemoryComponent implements OnInit {
 		this.ended  = false;
 
 		this.cards.map((e: Card) => delete e.choosen);
-		this.chooseCard();
+		// this.chooseCard();
+		this.start();
 	}
 
 	chooseCard(event = undefined, card: string = '') {
@@ -140,5 +144,25 @@ export class MemoryComponent implements OnInit {
 			$(this).removeClass('appear');
 			$(this).css({'z-index': '-2'});
 		});
+	}
+
+	start() {
+		this.startTimestamp = this.getTimestampMili();
+	}
+
+	getTimer() {
+		let diff = parseInt(this.getTimestampMili()) - parseInt(this.startTimestamp);
+		let timer = moment.duration(diff, 'milliseconds');
+		let format = moment(diff)
+						.format('mm:ss:SSS')
+						.split(':')
+						.filter(e => e !== '00')
+						.join(':');
+
+		return format;
+	}
+
+	getTimestampMili() {
+		return moment(new Date()).format('x');
 	}
 }

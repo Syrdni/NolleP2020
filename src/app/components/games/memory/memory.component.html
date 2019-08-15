@@ -10,13 +10,14 @@
 			<img class="imgTmp" src="assets/faviconTrans.ico">
 		</div>
 		<div *ngIf="show">
-			<div class="victoryScreen" *ngIf="ended">
+			<div class="victoryScreen" *ngIf="true">
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
 				<div class="content">
 					<h1>{{ victoryText }}</h1>
+					<h2>{{ getTimer() }}</h2>
 					<h2>{{ correct }}/{{ cards.length }}</h2>
 					<div class="row justify-content-center">
 						<div class="col-10 col-sm-10 col-md-10 col-lg-10">
@@ -29,8 +30,8 @@
 			<div *ngIf="loaded">
 				<h2 class="score">{{correct}}</h2>
 				<div class="row justify-content-center">
-					<h2 style="text-decoration: underline #ff1a68">{{ choosen.phosare }}</h2>
-					<!-- <h2 style="position: absolute; left: 80%;">{{ correct }}/{{ cards.length }}</h2> -->
+					<h2 style="text-decoration: underline #ff1a68">{{ choosen.phosare }}</h2> -->
+					<h2 style="position: absolute; left: 80%;">{{ correct }}/{{ cards.length }}</h2>
 				</div>
 				<div class="grid2x2 justify-content-center">
 					<div class="border">
