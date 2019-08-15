@@ -10,12 +10,11 @@ export class CrudComponent implements OnInit {
 
     sponsImgs:     Array<string> = [];
     coWorkersImgs: Array<string> = [];
-    cph:           Array<Object> = [];
+    cph:           Array<any> = [];
 
     sideToResetRight:  string;
     sideToResetLeft:   string;
     prevDir:           string;
-
 
     constructor() { 
         let pathSpons     = 'assets/sponsors/';

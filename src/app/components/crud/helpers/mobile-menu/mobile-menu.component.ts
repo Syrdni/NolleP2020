@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-menu.component.less']
 })
 export class MobileMenuComponent implements OnInit {
-
-  constructor() { }
+  isExpanded: boolean;
+  
+  constructor() { 
+    this.isExpanded = false;
+  }
 
   ngOnInit() {
   }
