@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Globals } from '../../../globals';
 
 @Component({
     selector: 'crud',
@@ -7,45 +8,37 @@ import * as $ from 'jquery';
     styleUrls: ['./crud.component.less']
 })
 export class CrudComponent implements OnInit {
-
-    sponsImgs:     Array<string> = [];
-    coWorkersImgs: Array<string> = [];
     cph:           Array<any> = [];
 
     sideToResetRight:  string;
     sideToResetLeft:   string;
     prevDir:           string;
 
-    constructor() { 
-        let pathSpons     = 'assets/sponsors/';
-        let pathCoWorkers = 'assets/coworkers/';
-
-        this.sponsImgs     = [`${pathSpons}/abf.png`, `${pathSpons}/sammes.png`, `${pathSpons}/skebo.png`];
-        this.coWorkersImgs = [`${pathCoWorkers}/campus.png`, `${pathCoWorkers}/ltu.png`, `${pathCoWorkers}/tkl.png`];
+    constructor(private globals: Globals) {         
         this.cph = [
-            {name: 'Google\'s', 
+            {name: '\'s', 
             xXx: [{
-                    type: 'Discord', link: 'https://discord.gg/K6ByRSk'
+                    type: '', link: ''
                 }
             ]},
-            {name: 'Salt\'s',   
+            {name: '\'s',   
             xXx: [{
-                    type: 'Snapchat',  
-                    link: 'https://www.snapchat.com/add/oph-salt' 
+                    type: '',  
+                    link: '' 
                 },
                 {
-                    type: 'Youtube',
-                    link: 'https://tinyurl.com/y57e9vvo'
+                    type: '',
+                    link: ''
                 }
             ]},
-            {name: 'Brawni\'s', 
+            {name: '\'s', 
             xXx: [{
-                    type: 'Podcast',    link: 'https://tinyurl.com/yy42y79y'
+                    type: '', link: ''
                 }
             ]},
-            {name: 'Roboto\'s', 
+            {name: '\'s', 
             xXx: [{
-                    type: 'Musiklista', link: 'https://tinyurl.com/y25xkwty'
+                    type: '', link: ''
                 }
             ]}
         ];

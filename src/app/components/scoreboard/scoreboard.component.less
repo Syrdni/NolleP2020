@@ -18,7 +18,7 @@ ul > li {
     color: #fff;
 }
 u {
-    text-decoration: underline #ff1a68 !important;
+    text-decoration: underline var(--ophQuotesTextDecoration) !important;
 }
 
 .box {
@@ -31,7 +31,7 @@ u {
 
     &:hover {
         cursor: pointer;
-        background: rgba(255, 56, 85, 0.5);
+        background: var(--ophQuotesHover);
     }
 
     span:nth-child(1) {
@@ -40,7 +40,7 @@ u {
         left: 0;
         width: 100%;
         height: 2px;
-        background: linear-gradient(to right, transparent, #ff1a68);
+        background: linear-gradient(to right, transparent, var(--ophQuotesBorderTop));
         animation: leftToRight 2s linear infinite;
     }
 
@@ -60,7 +60,7 @@ u {
         left: 0;
         width: 100%;
         height: 2px;
-        background: linear-gradient(to left, transparent, #ff1a68);
+        background: linear-gradient(to left, transparent, var(--ophQuotesBorderBottom));
         animation: rightToLeft 2s linear infinite;
     }
 
@@ -125,11 +125,11 @@ u {
 
 @keyframes upToDown {
     0% {
-        background: linear-gradient(to bottom, transparent, #ff1adb);
+        background: linear-gradient(to bottom, transparent, var(--ophQuotesBorderRight));
         transform: translateY(-100%);
     }
     100% {
-        background: linear-gradient(to bottom, transparent, #ff1adb);
+        background: linear-gradient(to bottom, transparent, var(--ophQuotesBorderRight));
         transform: translateY(100%);
     }
 }
@@ -145,11 +145,11 @@ u {
 
 @keyframes downToUp {
     0% {
-        background: linear-gradient(to top, transparent, #ff1adb);
+        background: linear-gradient(to top, transparent, var(--ophQuotesBorderLeft));
         transform: translateY(100%);
     }
     100% {
-        background: linear-gradient(to top, transparent, #ff1adb);
+        background: linear-gradient(to top, transparent, var(--ophQuotesBorderLeft));
         transform: translateY(-100%);
     }
 }

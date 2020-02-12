@@ -10,7 +10,7 @@
 		<span></span>
 		<div *ngFor="let item of scores; let i = index">
 			<div class="ophText" (click)="flavorTextToShow()" *ngIf="item.isVisible">
-				<h4>{{item.score}}</h4>
+				<h4>{{item.text}}</h4>
 			</div>
 		</div>
 	</div>

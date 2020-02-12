@@ -13,62 +13,62 @@
 			<p class="menu-title-text">Phöseriet</p>
 		</div>
 		<div class="col-1">
-			<a class="fas fa-times closebtn" style="color: #ff1a68;" (click)="isExpanded = !isExpanded"></a>
+			<a class="fas fa-times closebtn" (click)="isExpanded = !isExpanded"></a>
 		</div>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" disabled>
 			<span class="fas fa-person-booth" style="color: #000"></span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/vote" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/vote" routerLinkActive="active">
 			Rösta
 		</button>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" disabled>
 			<span class="fas fa-home" style="color: #000"></span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/home" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/home" routerLinkActive="active">
 			Hem
 		</button>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" style="width: 48px;" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" style="width: 48px;" disabled>
 			<span class="fas fa-exclamation gold-gradient" style="color: gold"></span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/activity" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/activity" routerLinkActive="active">
 			Aktivitet
 		</button>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" disabled>
 			<span class="fas fa-trophy gold-gradient" style="color: gold"></span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/scoreboard" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/scoreboard" routerLinkActive="active">
 			Nollekampen
 		</button>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" disabled>
 			<span>💌</span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/letter-to-nollan" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/letter-to-nollan" routerLinkActive="active">
 			Brev Till Nollan!
 		</button>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" disabled>
 			<span class="fas fa-users" style="color: #000"></span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/new-student" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/new-student" routerLinkActive="active">
 			Ditt Nollep
 		</button>
 	</div>
 	<div class="btn-group btn-block">
-		<button class="btn btn-danger" disabled>
+		<button class="btn" [ngClass]="globals.buttonOne" disabled>
 			<span class="fas fa-gamepad" style="color: #000"></span>
 		</button>
-		<button class="btn btn-block btn-outline-danger" (click)="isExpanded = !isExpanded" routerLink="/memory" routerLinkActive="active">
+		<button class="btn btn-block" [ngClass]="globals.buttonTwo" (click)="isExpanded = !isExpanded" routerLink="/memory" routerLinkActive="active">
 			Spel
 		</button>
 	</div>

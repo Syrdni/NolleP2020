@@ -5,22 +5,21 @@ import * as moment from 'moment';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
 
-import { Title } from "@angular/platform-browser";
-
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-	title: string;
-	year:  number;
-
-	constructor(private globals: Globals, private ts: Title, private cookieService: CookieService, private http: HttpClient) {
-		this.title = 'Nolleperioden';
-		this.year  = globals.year;
-
-		this.ts.setTitle(`Nollep ${this.year}`);
+	sponsImgs:     Array<string> = [];
+	coWorkersImgs: Array<string> = [];
+	
+	constructor(private globals: Globals, private cookieService: CookieService, private http: HttpClient) { 
+		let pathSpons     = 'assets/sponsors/';
+		let pathCoWorkers = 'assets/coworkers/';
+		
+        this.sponsImgs     = [`${pathSpons}/abf.png`, `${pathSpons}/sammes.png`, `${pathSpons}/skebo.png`];
+        this.coWorkersImgs = [`${pathCoWorkers}/campus.png`, `${pathCoWorkers}/ltu.png`, `${pathCoWorkers}/tkl.png`];
 	}
 
 	ngOnInit() {

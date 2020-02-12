@@ -1,6 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --letterToNollanDivider: rgba(238, 21, 68, .85);
+
+    --arrowColorMedia:     rgba(238, 21, 68, .85);
+    --arrowColorSponsors:  rgba(238, 21, 68, .85);
+    --arrowColorCrudTitle: rgba(238, 21, 68, .85);
+
+    --ophQuotesBorderTop:      #ff0057;
+    --ophQuotesBorderRight:    #ff1adb;
+    --ophQuotesBorderBottom:   #ff0057;
+    --ophQuotesBorderLeft:     #ff1adb;
+    --ophQuotesHover:          #ff0057;
+    --ophQuotesTextDecoration: #ff0057;
+
+    --mobileMenuButtonColor:     linear-gradient(45deg, #ff1a68, #ff1adb);
+    --mobileBtm:               #ff1a68;
+    --titleLineColor:          #ff1a68;
+    --menuTitleColor:          #ff1a68;
+    --mobileMenuCloseBtnColor: #ff1a68;
+
+    --imgCarouselColor: linear-gradient(315deg, #ff0057, #b3003d);
+
+    --cphCardFront: linear-gradient(45deg, #e91e63, #ed55ff);
+    --cphCardRight: linear-gradient(45deg, #262626, #989898);
+    --cphCardBack:  linear-gradient(45deg, #262626, #989898);
+    --cphCardLeft:  linear-gradient(45deg, #8b0000, #4c4c4c,#000);
+}
+
 body {
-    // overflow-x: hidden;
     background-image: url("/assets/tiles/cartographer.png");
     background-repeat: repeat;
     color: #656566;
@@ -28,14 +54,12 @@ body {
 }
 
 .title-arrow {
-    border-left: 22px solid rgba(238, 21, 68, 0.85);
+    border-left: 22px solid var(--arrowColorCrudTitle);
     border-right: 50px solid transparent;
-    border-top: 50px solid rgba(238, 21, 68, 0.85);
+    border-top: 50px solid var(--arrowColorCrudTitle);
     margin: 0 -25px 0 -15px;
 
     > h1, > h2, > h3, > h4 {
-        // margin-left: -15px;
-        // margin-right: -15px;
         position: absolute;
         top: 100%;
         left: 0%;
