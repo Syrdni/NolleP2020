@@ -18,7 +18,7 @@ export class Globals {
 		this.year = new Date().getFullYear();
 		this.ts.setTitle(`Nollep ${this.year}`);
 
-		this.buttonOne = 'btn-danger'
-		this.buttonTwo = 'btn-outline-danger'
+		this.buttonOne = 'btn-info'
+		this.buttonTwo = 'btn-outline-info'
 	}
 }
