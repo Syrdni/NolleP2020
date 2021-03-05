@@ -45,7 +45,7 @@ export class MemoryComponent implements OnInit {
 
 			this.cards = res.json();
 			this.show = true;
-			// this.chooseCard();
+			this.chooseCard();
 			this.start();
 			this.loaded = true;
 		});
@@ -59,7 +59,7 @@ export class MemoryComponent implements OnInit {
 		this.ended  = false;
 
 		this.cards.map((e: Card) => delete e.choosen);
-		// this.chooseCard();
+		this.chooseCard();
 		this.start();
 	}
 
