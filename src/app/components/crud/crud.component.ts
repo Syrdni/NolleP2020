@@ -16,29 +16,31 @@ export class CrudComponent implements OnInit {
 
     constructor(private globals: Globals) {         
         this.cph = [
-            {name: '\'s', 
+            {name: 'Ketchup\'s', 
             xXx: [{
-                    type: '', link: ''
+                    type: 'Cooking show', 
+                    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
                 }
             ]},
-            {name: '\'s',   
+            {name: 'Rostig\'s',   
             xXx: [{
-                    type: '',  
-                    link: '' 
+                    type: 'Vrålande',  
+                    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' 
                 },
                 {
-                    type: '',
-                    link: ''
+                    type: 'Skrålande',
+                    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
                 }
             ]},
-            {name: '\'s', 
+            {name: 'Sparkelz\'s', 
             xXx: [{
-                    type: '', link: ''
+                    type: 'UwUande', 
+                    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
                 }
             ]},
-            {name: '\'s', 
+            {name: 'Floof\'s', 
             xXx: [{
-                    type: '', link: ''
+                    type: 'Floofande', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
                 }
             ]}
         ];
