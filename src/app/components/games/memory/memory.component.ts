@@ -44,7 +44,7 @@ export class MemoryComponent implements OnInit {
 			}
 
 			this.cards = res.json();
-			this.show = false;
+			this.show = true;
 			this.chooseCard();
 			this.start();
 			this.loaded = true;
