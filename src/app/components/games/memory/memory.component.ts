@@ -42,8 +42,8 @@ export class MemoryComponent implements OnInit {
 			if(tmp[0].closed) {
 				return
 			}
-
 			this.cards = res.json();
+			this.cards.shift(); //Removes closed from the array of cards
 			this.show = true;
 			this.chooseCard();
 			this.start();
