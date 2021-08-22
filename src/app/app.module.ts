@@ -22,6 +22,7 @@ import { MobileMenuComponent }    from './components/crud/helpers/mobile-menu/mo
 import { ImageCarouselComponent } from './components/crud/helpers/image-carousel/image-carousel.component';
 import { LetterToNollanComponent } from './components/letter-to-nollan/letter-to-nollan.component';
 import { MemoryComponent } from './components/games/memory/memory.component';
+import { VideosComponent } from './components/videos/videos.component';
 // import { TitleComponent }         from './components/crud/helpers/title/title.component';
 
 
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'letter-to-nollan', component: LetterToNollanComponent },
   { path: 'memory',           component: MemoryComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'videos',            component: VideosComponent},
   { path: '**',               component: AppComponent }
 ];
 
@@ -56,6 +58,7 @@ const appRoutes: Routes = [
     ImageCarouselComponent,
     LetterToNollanComponent,
     MemoryComponent,
+    VideosComponent
     // TitleComponent
   ],
   imports: [
